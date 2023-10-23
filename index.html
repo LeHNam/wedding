@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Vy&Khoa</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous"></script>
+  
+  <style>
+    .container {
+      width: 100%;
+    }
+    
+    #logoHeader {
+      font-family: 'Abril Fatface';
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 43px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #275238;
+    }
+    
+    .navItemHeader {
+      font-family: 'Abril Fatface';
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #275238;
+    }
+    
+    .navItemHeader.active {
+      color: #275238 !important;
+      text-underline: #275238 !important;
+      text-decoration-line: underline;
+    }
+    
+    .headerText {
+      font-family: 'Abhaya Libre';
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 57px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #275238;
+    }
+    
+    .bodyText {
+      font-family: 'Adamina';
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #275238;
+    }
+
+    .banner-area {
+      overflow: hidden;
+      background: 0 0;
+  
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+  
+    }
+    .hero-area {
+      height: 50vh;
+      padding: 80px 0;
+    }
+
+    .banner-content-wrap {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    .banner-content-wrap:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .banner-content {
+      position: absolute;
+      text-align: right;
+      z-index: 300;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+    }
+
+    .hero-content-wrap {
+      background-image: url(/image/img.png);
+    }
+    
+    .hero-content-wrap:before{
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-content {
+      width: 40%;
+      top: 30px;
+      right: 30px;
+    }
+    .hero-content-area {
+      padding: 54px;
+    }
+
+    .hero-content-area-wrap {
+      background-color: #ffffffff;
+      opacity: 0.2;
+      border-radius: 40px;
+    }
+
+    .hero-content-wrap:before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+
+    #clock {
+      font-family: Adamina;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 30px;
+      letter-spacing: 0em;
+      color: #275238;
+      text-align: center;
+    }
+    .digit {
+      font-family: Abhaya Libre;
+      font-size: 64px;
+      font-weight: 700;
+      line-height: 76px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+    @-webkit-keyframes banner-area {
+      0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+      50% {
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15)
+      }
+      100% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+    }
+    
+  
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col col-xs-2">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <div id="logoHeader"><p>Vy & Khoa</p></div>
+        </div>
+      </nav>
+    </div>
+    <div class="col col-xs-10" id="navItemHeader">
+      <nav class="navbar navbar-expand-lg float-end">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link navItemHeader" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link navItemHeader" href="#pointsOfInterest">Points of Interest</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navItemHeader" href="#gallerry">Gallery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-xs-12">
+      <div class="d-flex justify-content-center text-center headerText">Our memories become a family now</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-xs-12">
+      <div class="d-flex justify-content-center text-center bodyText">Lorem ipsum dolor sit amet consectetur. Etiam et
+        purus bibendum adipiscing tincidunt iaculis viverra nulla. Odio amet mi netus erat. Sed nisi tempus pharetra
+        aliquet nisi. Cras id amet morbi suspendisse. Quis fringilla gravida mattis feugiat. Turpis cras nunc
+        consectetur eu et ornare lobortis. Orci vulputate egestas nunc nisl a vivamus a. Ipsum dictum pulvinar etiam mi
+        vitae tincidunt egestas pellentesque. Est id lorem aliquam malesuada senectus euismod.
+      </div>
+    </div>
+  </div>
+  <section class="banner-area hero-area position-relative row">
+    <div class="banner-content-wrap hero-content-wrap"></div>
+    <div class="banner-content hero-content float-end col">
+      <div class=" banner-area hero-content-area">
+        <div class=" banner-content-wrap hero-content-area-wrap"></div>
+        <div id="clock" class=" banner-content row">
+          <div class="col">
+            <div class="digit">305</div>
+            <span class="">days</span></div>
+          <div class=" col">
+            <div class="digit">17</div>
+            <span class="">hours</span></div>
+          <div class=" col">
+            <div class="digit">11</div>
+            <span class="">minutes</span></div>
+          <div class=" col">
+            <div class="digit">17</div>
+            <span class="">seconds</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
