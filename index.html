@@ -59,11 +59,11 @@
       text-align: center;
       color: #275238;
     }
-
+    
     .banner-area {
       overflow: hidden;
       background: 0 0;
-  
+      
       -webkit-box-align: stretch;
       -ms-flex-align: stretch;
       align-items: stretch;
@@ -77,13 +77,14 @@
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-  
+      
     }
+    
     .hero-area {
       height: 50vh;
       padding: 80px 0;
     }
-
+    
     .banner-content-wrap {
       background-repeat: no-repeat;
       background-size: cover;
@@ -94,7 +95,7 @@
       bottom: 0;
       left: 0;
     }
-
+    
     .banner-content-wrap:before {
       content: "";
       width: 100%;
@@ -103,7 +104,7 @@
       left: 0;
       top: 0;
     }
-
+    
     .banner-content {
       position: absolute;
       text-align: right;
@@ -112,12 +113,12 @@
       top: 0px;
       right: 0px;
     }
-
+    
     .hero-content-wrap {
       background-image: url(/image/img.png);
     }
     
-    .hero-content-wrap:before{
+    .hero-content-wrap:before {
       background-color: rgba(0, 0, 0, 0.3);
     }
     
@@ -126,16 +127,17 @@
       top: 30px;
       right: 30px;
     }
+    
     .hero-content-area {
       padding: 54px;
     }
-
+    
     .hero-content-area-wrap {
       background-color: #ffffffff;
       opacity: 0.2;
       border-radius: 40px;
     }
-
+    
     .hero-content-wrap:before {
       content: "";
       background-color: rgba(0, 0, 0, 0.3);
@@ -145,8 +147,8 @@
       left: 0;
       top: 0;
     }
-
-
+    
+    
     #clock {
       font-family: Adamina;
       font-size: 20px;
@@ -156,6 +158,7 @@
       color: #275238;
       text-align: center;
     }
+    
     .digit {
       font-family: Abhaya Libre;
       font-size: 64px;
@@ -164,7 +167,7 @@
       letter-spacing: 0em;
       text-align: center;
     }
-
+    
     @-webkit-keyframes banner-area {
       0% {
         -webkit-transform: scale(1);
@@ -179,7 +182,7 @@
         transform: scale(1)
       }
     }
-    
+  
   
   </style>
 </head>
@@ -233,18 +236,18 @@
     <div class="banner-content hero-content float-end col">
       <div class=" banner-area hero-content-area">
         <div class=" banner-content-wrap hero-content-area-wrap"></div>
-        <div id="clock" class=" banner-content row">
+        <div  id="countdown" class=" banner-content row" >
           <div class="col">
-            <div class="digit">305</div>
+            <div class="digit" id="days">305</div>
             <span class="">days</span></div>
           <div class=" col">
-            <div class="digit">17</div>
+            <div class="digit" id="hours">17</div>
             <span class="">hours</span></div>
           <div class=" col">
-            <div class="digit">11</div>
+            <div class="digit" id="minutes">11</div>
             <span class="">minutes</span></div>
           <div class=" col">
-            <div class="digit">17</div>
+            <div class="digit" id="seconds">17</div>
             <span class="">seconds</span></div>
         </div>
       </div>
@@ -253,3 +256,48 @@
 </div>
 </body>
 </html>
+<script>
+  (function () {
+    const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+    
+    //I'm adding this section so I don't have to keep updating this pen every year :-)
+    //remove this if you don't need it
+    let today = new Date(),
+        dd = String(today.getDate()).padStart(2, "0"),
+        mm = String(today.getMonth() + 1).padStart(2, "0"),
+        yyyy = today.getFullYear(),
+        nextYear = yyyy + 1,
+        dayMonth = "12/01/",
+        birthday = dayMonth + yyyy;
+    
+    today = mm + "/" + dd + "/" + yyyy;
+    if (today > birthday) {
+      birthday = dayMonth + nextYear;
+    }
+    //end
+    
+    const countDown = new Date(birthday).getTime(),
+        x = setInterval(function () {
+          
+          const now = new Date().getTime(),
+              distance = countDown - now;
+          
+          document.getElementById("days").innerText = Math.floor(distance / (day)),
+              document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+              document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+              document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+          
+          //do something later when date is reached
+          if (distance < 0) {
+            document.getElementById("headline").innerText = "It's my birthday!";
+            document.getElementById("countdown").style.display = "none";
+            document.getElementById("content").style.display = "block";
+            clearInterval(x);
+          }
+          //seconds
+        }, 0)
+  }());
+</script>
