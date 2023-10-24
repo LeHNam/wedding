@@ -81,7 +81,7 @@
     }
     
     .hero-area {
-      height: 50vh;
+      height: 100vh;
       padding: 80px 0;
     }
     
@@ -182,12 +182,71 @@
         transform: scale(1)
       }
     }
+    
+    .player {
+      position: fixed;
+      bottom: 70px;
+      left: 50px;
+      width: 48px;
+      height: 48px;
+      z-index: 99999;
+      display: none;
+    }
+    
+    .player .playerIcon {
+      cursor: pointer;
+      display: block;
+      width: 48px;
+      height: 48px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      position: absolute;
+      z-index: 2;
+    }
+    
+    .player:after {
+      content: "";
+      position: absolute;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -o-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #ffffffff;
+      z-index: -1;
+      width: 120%;
+      height: 120%;
+      left: -10%;
+      top: -10%;
+      -webkit-animation: biilogo-pulse 1s infinite;
+      animation: biilogo-pulse 1s infinite;
+      z-index: 1;
+      opacity: 0.2;
+    }
+    
+    .player img {
+      width: 100%;
+      z-index: 99999;
+      position: absolute;
+      cursor: pointer;
+    }
+    
+    
+    @media (max-width: 799px) {
+      .player {
+        bottom: 30px;
+        left: 20px;
+      }
+    }
   
   
   </style>
 </head>
 <body>
-<div class="container">
+<div>
   <div class="row">
     <div class="col col-xs-2">
       <nav class="navbar navbar-expand-lg">
@@ -253,7 +312,20 @@
       </div>
     </div>
   </section>
-</div>
+  <div class="player" style="display: block;">
+    <div onclick="playPause();" class="playerIcon">
+			<span id="playerVolumeOff">
+       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M19.9375 16.5C20.4453 16.5 20.875 16.9297 20.875 17.4375V30.5625C20.875 31.1094 20.4453 31.5 19.9375 31.5C19.3906 31.5 19 31.1094 19 30.5625V17.4375C19 16.9297 19.3906 16.5 19.9375 16.5ZM28.0625 16.5C28.5703 16.5 29 16.9297 29 17.4375V30.5625C29 31.1094 28.5703 31.5 28.0625 31.5C27.5156 31.5 27.125 31.1094 27.125 30.5625V17.4375C27.125 16.9297 27.5156 16.5 28.0625 16.5Z" fill="#F4F4F5"/>
+       </svg>
+			</span>
+      <span style="display:none;" id="playerVolumeOn">
+       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.9375 16.5C20.4453 16.5 20.875 16.9297 20.875 17.4375V30.5625C20.875 31.1094 20.4453 31.5 19.9375 31.5C19.3906 31.5 19 31.1094 19 30.5625V17.4375C19 16.9297 19.3906 16.5 19.9375 16.5ZM28.0625 16.5C28.5703 16.5 29 16.9297 29 17.4375V30.5625C29 31.1094 28.5703 31.5 28.0625 31.5C27.5156 31.5 27.125 31.1094 27.125 30.5625V17.4375C27.125 16.9297 27.5156 16.5 28.0625 16.5Z" fill="#F4F4F5"/>
+      </svg>
+			</span>
+    </div>
+  </div></div>
 </body>
 </html>
 <script>
@@ -300,4 +372,16 @@
           //seconds
         }, 0)
   }());
+  
+  function playPause() {
+    if(document.getElementById("playerVolumeOff").style.display === 'none') {
+      document.getElementById("playerVolumeOff").style.display = 'block';
+      document.getElementById("playerVolumeOn").style.display = 'none';
+    } else {
+      document.getElementById("playerVolumeOff").style.display = 'none';
+      document.getElementById("playerVolumeOn").style.display = 'block';
+    }
+  }
+
+
 </script>
