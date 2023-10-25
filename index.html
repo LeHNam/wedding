@@ -8,6 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
           crossorigin="anonymous"></script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   
   <style>
     .container {
@@ -118,7 +119,7 @@
       text-align: right;
       z-index: 300;
       width: 100%;
-      top: 0px;
+      top: 10vh ;
       right: 0px;
     }
     
@@ -252,41 +253,85 @@
       cursor: pointer;
     }
     
-    
+    #comingSoon{
+      font-size: 70px;
+    }
+    .container {
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     @media (max-width: 799px) {
-      .player {
-        bottom: 30px;
-        left: 20px;
+      
+      .hero-content {
+        width: 100%;
+        top: 10vh;
+        right: 0;
+      }
+      
+      #countdown {
+        font-family: Adamina;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        color: #ffffffff;
+        text-align: center;
+      }
+      
+      .digit {
+        font-family: Abhaya Libre;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 76px;
+        letter-spacing: 0em;
+        text-align: center;
+      }
+      
+      #comingSoon{
+        font-size: 40px;
       }
     }
-  
-  
+    @media (min-width: 992px){
+      .col-md-offset-2 {
+        margin-left: 16.66667%;
+      }
+    }
+    @media (min-width: 768px){
+      .container {
+        width: 750px;
+      }
+    }
   </style>
 </head>
 <body>
 <div>
   <section class="banner-area hero-area position-relative row">
     <div class="banner-content-wrap hero-content-wrap"></div>
-    <div class="banner-content hero-content float-center col">
-      <div class=" banner-area hero-content-area">
-        <div class=" banner-content-wrap hero-content-area-wrap"></div>
-        <div  id="countdown" class=" banner-content" >
-          <p style="font-size: 80px; font-family: 'Abhaya Libre';">Coming Soon</p>
-          <div class="row clockBanner">
-            <div class="col">
-              <div class="digit" id="days">305</div>
-              <span class="">days</span></div>
-            <div class=" col">
-              <div class="digit" id="hours">17</div>
-              <span class="">hours</span></div>
-            <div class=" col">
-              <div class="digit" id="minutes">11</div>
-              <span class="">minutes</span></div>
-            <div class=" col">
-              <div class="digit" id="seconds">17</div>
-              <span class="">seconds</span></div>
+    <div class="banner-content ">
+      <div class="container">
+        <div id="countdown" class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <p id="comingSoon">
+            <h1 style="font-family: Abhaya Libre">Vy & Khoa</h1>
+            <h2>We Are Getting Marrie</h2>
+            </p>
+            <div class="row ">
+              <div class="col col-xs-1">
+                <div class="digit" id="days">305</div>
+                <span class="">days</span></div>
+              <div class=" col col-xs-1">
+                <div class="digit" id="hours">17</div>
+                <span class="">hours</span></div>
+              <div class=" col col-xs-1">
+                <div class="digit" id="minutes">11</div>
+                <span class="">minutes</span></div>
+              <div class=" col col-xs-1">
+                <div class="digit" id="seconds">17</div>
+                <span class="">seconds</span></div>
+            </div>
           </div>
-        
         </div>
       </div>
     </div>
