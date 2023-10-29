@@ -2,59 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wedding Vy&Khoa</title>
+  <title>Wedding Khoa&Vy</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
           crossorigin="anonymous"></script>
-  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
   <style>
     .container {
-      width: 100%;
+      max-width: 100%;
     }
     
     #logoHeader {
-      font-family: 'Abril Fatface';
+      font-family: Abril Fatface;
       font-size: 32px;
       font-weight: 400;
       line-height: 43px;
       letter-spacing: 0em;
-      text-align: left;
+      text-align: center;
       color: #275238;
     }
     
     .navItemHeader {
-      font-family: 'Abril Fatface';
+      font-family: Baskerville;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 20px;
-      letter-spacing: 0em;
+      letter-spacing: -0.011em;
       text-align: left;
       color: #275238;
     }
     
     .navItemHeader.active {
+      font-weight: 600;
+      letter-spacing: 0em;
+      text-align: left;
       color: #275238 !important;
       text-underline: #275238 !important;
       text-decoration-line: underline;
+      text-underline-offset: 8px;
     }
     
     .headerText {
-      font-family: 'Abhaya Libre';
+      font-family: Baskerville;
       font-size: 48px;
       font-weight: 400;
-      line-height: 57px;
+      line-height: 55px;
       letter-spacing: 0em;
       text-align: center;
       color: #275238;
     }
     
     .bodyText {
-      font-family: 'Adamina';
-      font-size: 16px;
+      font-family: Baskerville;
+      font-size: 18px;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 27px;
       letter-spacing: 0em;
       text-align: center;
       color: #275238;
@@ -107,56 +113,35 @@
     
     .banner-content {
       position: absolute;
-      text-align: right;
       z-index: 300;
       width: 100%;
       top: 0px;
       right: 0px;
+      height: 100%;
     }
     
     .hero-content-wrap {
-      background-image: url(/image/img.png);
+      background-image: url(/image/banner.png);
     }
     
     .hero-content-wrap:before {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-    
-    .hero-content {
-      width: 40%;
-      top: 30px;
-      right: 30px;
-    }
-    
-    .hero-content-area {
-      padding: 54px;
-    }
-    
-    .hero-content-area-wrap {
-      background-color: #ffffffff;
-      opacity: 0.2;
-      border-radius: 40px;
-    }
-    
-    .hero-content-wrap:before {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.3);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: 0;
-      top: 0;
     }
     
     
     #countdown {
-      font-family: Adamina;
+      font-family: Baskerville;
       font-size: 20px;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 30px;
       letter-spacing: 0em;
-      color: #275238;
       text-align: center;
+      color: #FFFFFF;
+      border-radius: 40px;
+      margin: 30px;
+      background-color:  #010D0580;
+      padding: 32px 36px;
+      max-width: 490px;
+      
     }
     
     .digit {
@@ -168,191 +153,211 @@
       text-align: center;
     }
     
-    @-webkit-keyframes banner-area {
-      0% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-      }
-      50% {
-        -webkit-transform: scale(1.15);
-        transform: scale(1.15)
-      }
-      100% {
-        -webkit-transform: scale(1);
-        transform: scale(1)
-      }
+    #player {
+      position: absolute;
+      bottom: 0px;
+      margin: 10px;
+    }
+    .player{
+      width: 88px;
+      height: 88px;
+      background-color: #010D05;
+      border-radius: 50%;
+    }
+    .playerText{
+      padding-left: 20px;
+      padding-top: 20px;
     }
     
-    .player {
-      position: fixed;
-      bottom: 70px;
-      left: 50px;
-      width: 58px;
-      height: 58px;
-      z-index: 99999;
-      display: none;
-    }
-    
-    .playerText {
-      position: fixed;
-      bottom: 70px;
-      left: 140px;
-      z-index: 99999;
-      display: none;
+    #songName{
+      font-family: Baskerville;
+      font-size: 20px;
+      font-weight: 600;
       line-height: 20px;
       letter-spacing: 0em;
       text-align: left;
-      color: #ffffffff;
+      color: #F4F4F5;
+      
+      
     }
-    
-    .player .playerIcon {
-      cursor: pointer;
-      display: block;
-      width: 58px;
-      height: 58px;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -o-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%;
-      position: absolute;
-      z-index: 2;
-      padding-top: 6px;
-      padding-left: 6px;
+    #songLyrics{
+      font-family: Baskerville;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #F4F4F5;
+      background-color:  #010D0580;
+      display: flex;
+      margin-bottom: 20px;
+      /* width: 90%; */
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 3px;
+      padding: 8px 10px;
+      justify-content: center;
+      flex-direction: column;
     }
-    
-    .player:after {
-      content: "";
-      position: absolute;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -o-border-radius: 50%;
-      -ms-border-radius: 50%;
-      border-radius: 50%;
-      background-color: #ffffffff;
-      z-index: -1;
-      width: 120%;
-      height: 120%;
-      -webkit-animation: biilogo-pulse 1s infinite;
-      animation: biilogo-pulse 1s infinite;
-      z-index: 1;
-      opacity: 0.2;
-    }
-    
-    .player img {
-      width: 100%;
-      z-index: 99999;
-      position: absolute;
-      cursor: pointer;
-    }
-    
-    
-    @media (max-width: 799px) {
-      .player {
-        bottom: 30px;
-        left: 20px;
+    @media (max-width: 576px) {
+      .hero-area{
+        height: 75vh;
       }
+      .hero-content-wrap {
+        background-image: url(/image/banner_mobile.png);
+      }
+      
+      #countdown {
+        padding: 24px 20px;
+        font-size: 16px;
+        margin: 40px 20px;
+        line-height: 24px;
+        
+      }
+      .digit {
+        font-size: 32px;
+        line-height: 38px;
+        letter-spacing: 0em;
+        text-align: center;
+        
+      }
+      
+      .headerText {
+        font-size: 32px;
+        line-height: 37px;
+        padding-right: 50px;
+        padding-left: 50px;
+      }
+      
+      .bodyText {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      
+      .playerText{
+        display: none;
+      }
+      
+      #player {
+        position: inherit;
+        bottom: inherit;
+        width: 100%;
+        
+      }
+      
     }
-  
   
   </style>
 </head>
 <body>
-<div>
+<div class="container">
   <div class="row">
-    <div class="col col-xs-2">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <div id="logoHeader"><p>Vy & Khoa</p></div>
-        </div>
-      </nav>
+    <div class="col col-11 col-sm-2" id="logoHeader">
+      Khoa & Vy
     </div>
-    <div class="col col-xs-10" id="navItemHeader">
-      <nav class="navbar navbar-expand-lg float-end">
+    <div class="col col-1 col-sm-10 " id="navItemHeader">
+      <nav class="navbar navbar-expand-lg  float-end">
         <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link navItemHeader" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link navItemHeader" href="#pointsOfInterest">Gửi lời chúc</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navItemHeader" href="#gallerry">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link navItemHeader" href="#info">Thông tin tiệc và lễ</a>
-              </li>
-            </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                  aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: #275238 !important;"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+               aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link navItemHeader active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link navItemHeader" href="/pointsOfInterest.html">Gửi lời chúc</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link navItemHeader" href="/album.html">Album</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link navItemHeader" href="/info.html">Thông tin tiệc và lễ</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
     </div>
   </div>
   <div class="row">
-    <div class="col col-xs-12">
-      <div class="d-flex justify-content-center text-center headerText">Our memories become a family now</div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col col-xs-12">
-      <div class="d-flex justify-content-center text-center bodyText">Lorem ipsum dolor sit amet consectetur. Etiam et
-        purus bibendum adipiscing tincidunt iaculis viverra nulla. Odio amet mi netus erat. Sed nisi tempus pharetra
-        aliquet nisi. Cras id amet morbi suspendisse. Quis fringilla gravida mattis feugiat. Turpis cras nunc
-        consectetur eu et ornare lobortis. Orci vulputate egestas nunc nisl a vivamus a. Ipsum dictum pulvinar etiam mi
-        vitae tincidunt egestas pellentesque. Est id lorem aliquam malesuada senectus euismod.
+    <div class="col col-12">
+      <div class=" text-center ">
+        <p class="headerText">Vun đắp kỷ niệm - Xây dựng gia đình</p>
+        <p class="bodyText">
+          <img src="image/quote_left.png" height="18">
+          Nếu có một ngày, chúng ta kết hôn, em chỉ hy vọng
+          rằng, đó chính là vì tình yêu.
+          Ở thời điểm phù hợp nhất, mặc lên người bộ váy cưới đẹp nhất, gả cho người đáng tin cậy nhất.
+          <img src="image/quote_right.png" height="18">
+        
+        </p>
       </div>
     </div>
   </div>
-  <section class="banner-area hero-area position-relative row">
-    <div class="banner-content-wrap hero-content-wrap"></div>
-    <div class="banner-content hero-content float-end col">
-      <div class=" banner-area hero-content-area">
-        <div class=" banner-content-wrap hero-content-area-wrap"></div>
-        <div  id="countdown" class=" banner-content row" >
-          <div class="col">
+  <div class="row"  id="home">
+    <section class="banner-area hero-area position-relative ">
+      <div class="banner-content-wrap hero-content-wrap"></div>
+      <div class="banner-content hero-content">
+        <div id="countdown" class="row">
+          <div class="col ">
             <div class="digit" id="days">305</div>
             <span class="">days</span></div>
-          <div class=" col">
+          <div class="col ">
             <div class="digit" id="hours">17</div>
             <span class="">hours</span></div>
-          <div class=" col">
+          <div class="col ">
             <div class="digit" id="minutes">11</div>
             <span class="">minutes</span></div>
-          <div class=" col">
+          <div class="col ">
             <div class="digit" id="seconds">17</div>
             <span class="">seconds</span></div>
         </div>
-      </div>
-    </div>
-  </section>
-  <div class="player" style="display: block;">
-    <div onclick="playPause();" class="playerIcon" >
+        <div class="d-flex align-items-center justify-content-center" id="player">
+          <div class="player" >
+            <div onclick="playPause();" class="playerIcon" >
         <span id="playerVolumeOff">
-          <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="29" cy="29" r="28.75" fill="white" fill-opacity="0.1" stroke="white" stroke-width="0.5"/>
-  <path d="M22.4375 20.5234C23.0234 20.1719 23.7656 20.1719 24.3516 20.5625L35.6016 27.3984C36.1484 27.75 36.5 28.375 36.5 29C36.5 29.6641 36.1484 30.2891 35.6016 30.6016L24.3516 37.4766C23.7656 37.8281 23.0234 37.8672 22.4375 37.5156C21.8516 37.2031 21.5 36.5781 21.5 35.875V22.125C21.5 21.4609 21.8516 20.8359 22.4375 20.5234ZM23.375 35.875L34.625 29L23.375 22.125V35.875Z" fill="#F4F4F5"/>
-  </svg>
+<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="44" cy="44" r="44" fill="white" fill-opacity="0.1"/>
+<circle cx="44" cy="44" r="28.75" fill="white" fill-opacity="0.1" stroke="white" stroke-width="0.5"/>
+<path d="M37.4375 35.5234C38.0234 35.1719 38.7656 35.1719 39.3516 35.5625L50.6016 42.3984C51.1484 42.75 51.5 43.375 51.5 44C51.5 44.6641 51.1484 45.2891 50.6016 45.6016L39.3516 52.4766C38.7656 52.8281 38.0234 52.8672 37.4375 52.5156C36.8516 52.2031 36.5 51.5781 36.5 50.875V37.125C36.5 36.4609 36.8516 35.8359 37.4375 35.5234ZM38.375 50.875L49.625 44L38.375 37.125V50.875Z" fill="#F4F4F5"/>
+</svg>
   
         </span>
-      <span  id="playerVolumeOn"  style="display:none;">
-          <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="29" cy="29" r="28.75" fill="white" fill-opacity="0.1" stroke="white" stroke-width="0.5"/>
-  <path d="M24.9375 21.5C25.4453 21.5 25.875 21.9297 25.875 22.4375V35.5625C25.875 36.1094 25.4453 36.5 24.9375 36.5C24.3906 36.5 24 36.1094 24 35.5625V22.4375C24 21.9297 24.3906 21.5 24.9375 21.5ZM33.0625 21.5C33.5703 21.5 34 21.9297 34 22.4375V35.5625C34 36.1094 33.5703 36.5 33.0625 36.5C32.5156 36.5 32.125 36.1094 32.125 35.5625V22.4375C32.125 21.9297 32.5156 21.5 33.0625 21.5Z" fill="#F4F4F5"/>
-  </svg>
-        </span>
-    </div>
-    <audio id="playerAudio" autoplay src="https://cdn.biihappy.com/ziiweb/wedding-musics/Perfect-EdSheeran-6445593.mp3" controls="controls" style="display: none;"></audio>
+              <span  id="playerVolumeOn"  style="display:none;">
+<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="44" cy="44" r="44" fill="white" fill-opacity="0.1"/>
+<circle cx="44" cy="44" r="28.75" fill="white" fill-opacity="0.1" stroke="white" stroke-width="0.5"/>
+<path d="M39.9375 36.5C40.4453 36.5 40.875 36.9297 40.875 37.4375V50.5625C40.875 51.1094 40.4453 51.5 39.9375 51.5C39.3906 51.5 39 51.1094 39 50.5625V37.4375C39 36.9297 39.3906 36.5 39.9375 36.5ZM48.0625 36.5C48.5703 36.5 49 36.9297 49 37.4375V50.5625C49 51.1094 48.5703 51.5 48.0625 51.5C47.5156 51.5 47.125 51.1094 47.125 50.5625V37.4375C47.125 36.9297 47.5156 36.5 48.0625 36.5Z" fill="#F4F4F5"/>
+</svg>
+          </span>
+            </div>
+            <audio id="playerAudio" autoplay src="https://cdn.biihappy.com/ziiweb/wedding-musics/Perfect-EdSheeran-6445593.mp3" controls="controls" style="display: none;" loop></audio>
+          </div>
+          <div class="playerText ">
+            <div id="songName">Wedding Song</div>
+            <div id="songLyrics">This is lyric is playing here This is lyric is playing here</div>
+          </div>
+        </div>
+      
+      </div>
+    </section>
   </div>
-  <div class="playerText" style="display: block;">
-    <b>Wedding Song</b>
-    <div style="color: rgba(255, 255, 255, 0.3)">This is lyric is playing here This is lyric is playing here</div>
+  
+  <div class="row">
+    <div>home</div>
+    <div id="pointsOfInterest">pointsOfInterest</div>
+    <div id="gallerry">gallerry</div>
+    <div id="info">info</div>
   </div>
-
 </div>
-</body>
-</html>
 <script>
   (function () {
     
@@ -368,7 +373,7 @@
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-          dayMonth = "12/02/",
+        dayMonth = "12/02/",
         birthday = dayMonth + yyyy;
     
     today = mm + "/" + dd + "/" + yyyy;
@@ -383,10 +388,10 @@
           const now = new Date().getTime(),
               distance = countDown - now;
           
-          document.getElementById("days").innerText = Math.floor(distance / (day)),
-              document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-              document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-              document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+          document.getElementById("days").innerText = (Math.floor(distance / (day))  <10 ? '0': '')+Math.floor(distance / (day)),
+              document.getElementById("hours").innerText = (Math.floor((distance % (day)) / (hour)) < 10 ? '0': '')+Math.floor((distance % (day)) / (hour)),
+              document.getElementById("minutes").innerText = (Math.floor((distance % (hour)) / (minute)) < 10 ? '0': '')+Math.floor((distance % (hour)) / (minute)),
+              document.getElementById("seconds").innerText = (Math.floor((distance % (minute)) / second) < 10 ? '0': '')+ Math.floor((distance % (minute)) / second)  ;
           
           //do something later when date is reached
           if (distance < 0) {
@@ -398,7 +403,6 @@
           //seconds
         }, 0)
   }());
-  
   function playPause() {
     if(document.getElementById("playerVolumeOff").style.display === 'none') {
       document.getElementById("playerVolumeOff").style.display = 'block';
@@ -410,4 +414,9 @@
       document.getElementById("playerAudio").play();
     }
   }
+
 </script>
+
+</body>
+
+</html>
