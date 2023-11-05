@@ -16,9 +16,11 @@
     .container {
       max-width: 100%;
     }
-    
+    .container{
+      font-family: Baskerville;
+    }
+
     #logoHeader {
-      font-family: Abril Fatface;
       font-size: 32px;
       font-weight: 400;
       line-height: 43px;
@@ -62,7 +64,7 @@
       text-align: right ;
       margin-bottom: 40px;
     }
-    #phanThietHeaderText {
+    .nav-pills .nav-link.active {
       width: 113px;
       height: 40px;
       padding: 7.5px 14px 7.5px 14px;
@@ -80,7 +82,7 @@
       width: 100%;
       margin-bottom: 40px;
     }
-    #saiGonHeaderText {
+    .nav-pills .nav-link {
       width: 113px;
       height: 40px;
       padding: 7.5px 14px 7.5px 14px;
@@ -93,6 +95,7 @@
       letter-spacing: 0em;
       background-color: #FFFFFF  ;
       color: #336B49;
+      border: 1px solid #27A35E;
     }
 
     .text1{
@@ -160,7 +163,28 @@
     #phanThietBody {
       border-right: 1px solid #27A35E;
     }
+
+    .mobile{
+      display: none;
+    }
+    .desktop{
+      display: block;
+    }
+
     @media (max-width: 576px) {
+      .mobile{
+        display: none;
+      }
+      .desktop{
+        display: block;
+      }
+      #navItemHeader{
+        position: absolute;
+        padding: 0;
+      }
+      .offcanvas.show{
+        width: 70%;
+      }
   
       #phanThietHeader {
         text-align: center;
@@ -171,7 +195,16 @@
       #phanThietBody {
         border-right: 0px solid #27A35E;
       }
+      
+      #phanThietBody:after {
+        display: block;
+        content: '';
+        border-bottom: 1px solid #27A35E;
+        width: 100%;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
   
+      }
     }
   
   </style>
@@ -180,10 +213,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="col col-11 col-sm-2" id="logoHeader">
+    <div class="col col-12 col-sm-2" id="logoHeader">
       Khoa & Vy
     </div>
-    <div class="col col-1 col-sm-10 " id="navItemHeader">
+    <div class="col col-sm-10 " id="navItemHeader">
       <nav class="navbar navbar-expand-lg  float-end">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -192,13 +225,16 @@
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="offcanvas-header " style="padding: 8px">
+              <div style="width: 100%; text-align: right; display: block">
+                <button type="button" class="btn-close pull-right" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+              </div>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader " aria-current="page" href="/home.html">Home</a>
+                  <a class="nav-link navItemHeader " aria-current="page" href="/home.html">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link navItemHeader" href="/pointsOfInterest.html">Gửi lời chúc</a>
@@ -207,7 +243,7 @@
                   <a class="nav-link navItemHeader " href="/album.html">Album</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader active" href="#">Thông tin tiệc và lễ</a>
+                  <a class="nav-link navItemHeader active" href="#">Thông tin Lễ & Tiệc</a>
                 </li>
               </ul>
             </div>
@@ -242,48 +278,80 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col col-12 col-sm-6">
-      <div id="phanThietHeader">
-          <button  id="phanThietHeaderText" disabled>Phan Thiết</button>
+  <div class="row d-flex">
+    <ul class="nav nav-pills mb-3 list-inline mx-auto justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation" style="margin-right: 12px">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true">Phan Thiết
+        </button>
+      </li>
+      <li class="nav-item" role="presentation" style="margin-left: 12px">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Sai Gon
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+           tabindex="0">
+        <div class="row">
+          <div class="col col-12 col-sm-6" id="phanThietBody">
+            <div class=" row " >
+              <p class="text1">
+                Hôn lễ
+              </p>
+              <p class="text2">
+                THỨ BẢY, NGÀY 02 THÁNG 12 NĂM 2023 </p>
+              <p class="text3">
+                (Nhằm ngày 20 tháng 10 năm Quý Mão) </p>
+              <p class="text4">
+                14:00 PM </p>
+              <p class="text5">
+                Tư gia
+              </p>
+            </div>
+          </div>
+          <div class="col col-12 col-sm-6">
+            <div class=" row ">
+              <p class="text1">
+                Tiệc cưới
+              </p>
+              <p class="text2">
+                THỨ BẢY, NGÀY 02 THÁNG 12 NĂM 2023 </p>
+              <p class="text3">
+                (Nhằm ngày 20 tháng 10 năm Quý Mão) </p>
+              <p class="text4">
+                17:00 PM </p>
+              <p class="text5">
+                Sảnh Queen - Nhà hàng tiệc cưới Sunrise Palace
+                283 Ngô Gia Tự, Phường Tấn Tài, TP. PR-TC, Tỉnh Bình Thuận
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class=" row " id="phanThietBody">
-        <p class="text1">
-          Hôn lễ
-        </p>
-        <p class="text2">
-          THỨ NĂM, NGÀY 17 THÁNG 09 NĂM 2023 </p>
-        <p class="text3">
-          (Nhằm ngày 20 tháng 10 năm Quý Mão) </p>
-        <p class="text4">
-          06:00 am - 12:00 pm </p>
-        <p class="text5">
-          Hoa Binh Hall, The Cliff Resort - Wedding Event, 37 Đường 59, Phường 14, Gò Vấp, Phan Thiết
-        </p>
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <div class="row">
+          <div class="col col-12 col-sm-12">
+            <div class=" row ">
+              <p class="text1">
+                Tiệc báo hỷ
+              </p>
+              <p class="text2">
+                THỨ BẢY, NGÀY 16 THÁNG 12 NĂM 2023 </p>
+              <p class="text3">
+                (Nhằm ngày 04 tháng 11 năm Quý Mão)</p>
+              <p class="text4">
+                18:00 PM </p>
+              <p class="text5">
+                Sảnh Bella Vita, Amor Resort - Wedding & Event Garden
+                61A Nguyễn Văn Đậu, Phường 6, Quận Bình Thạnh, TP. HCM
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    
-    
     </div>
-    <div class="col col-12 col-sm-6">
-      <div id="saiGonHeader">
-        <button  id="saiGonHeaderText" disabled>Phan Thiết</button>
-      </div>
-      <div class=" row ">
-        <p class="text1">
-          Sai Gon
-        </p>
-        <p class="text2">
-          THỨ NĂM, NGÀY 17 THÁNG 09 NĂM 2023 </p>
-        <p class="text3">
-          (Nhằm ngày 20 tháng 10 năm Quý Mão) </p>
-        <p class="text4">
-          06:00 am - 12:00 pm </p>
-        <p class="text5">
-          Hoa Binh Hall, The Cliff Resort - Wedding Event, 37 Đường 59, Phường 14, Gò Vấp, Phan Thiết
-        </p>
-      </div>
-    </div>
-  
   </div>
 </div>
 <script>

@@ -20,9 +20,11 @@
     .container {
       max-width: 100%;
     }
-    
+    .container{
+      font-family: Baskerville;
+    }
+
     #logoHeader {
-      font-family: Abril Fatface;
       font-size: 32px;
       font-weight: 400;
       line-height: 43px;
@@ -77,6 +79,14 @@
       display: block;
     }
     @media (max-width: 576px) {
+      #navItemHeader{
+        position: absolute;
+        padding: 0;
+      }
+      .offcanvas.show{
+        width: 70%;
+      }
+  
       .mobile{
         display: block;
       }
@@ -128,10 +138,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="col col-11 col-sm-2" id="logoHeader">
+    <div class="col col-12 col-sm-2" id="logoHeader">
       Khoa & Vy
     </div>
-    <div class="col col-1 col-sm-10 " id="navItemHeader">
+    <div class="col col-sm-10 " id="navItemHeader">
       <nav class="navbar navbar-expand-lg  float-end">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -140,13 +150,16 @@
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="offcanvas-header " style="padding: 8px">
+              <div style="width: 100%; text-align: right; display: block">
+                <button type="button" class="btn-close pull-right" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+              </div>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader " aria-current="page" href="/home.html">Home</a>
+                  <a class="nav-link navItemHeader " aria-current="page" href="/home.html">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link navItemHeader" href="/pointsOfInterest.html">Gửi lời chúc</a>
@@ -155,7 +168,7 @@
                   <a class="nav-link navItemHeader active" href="#">Album</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader " href="/info.html">Thông tin tiệc và lễ</a>
+                  <a class="nav-link navItemHeader " href="/info.html">Thông tin Lễ & Tiệc</a>
                 </li>
               </ul>
             </div>
@@ -182,7 +195,6 @@
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
-  
   });
 
 </script>

@@ -15,9 +15,11 @@
     .container {
       max-width: 100%;
     }
-    
+    .container{
+      font-family: Baskerville;
+    }
+
     #logoHeader {
-      font-family: Abril Fatface;
       font-size: 32px;
       font-weight: 400;
       line-height: 43px;
@@ -48,12 +50,14 @@
     
     .headerText {
       font-family: Baskerville;
-      font-size: 48px;
       font-weight: 400;
       line-height: 55px;
       letter-spacing: 0em;
       text-align: center;
       color: #275238;
+      font-size: 40px;
+      word-wrap: break-word;
+      margin-bottom: 40px;
     }
     
     .bodyText {
@@ -63,7 +67,9 @@
       line-height: 27px;
       letter-spacing: 0em;
       text-align: center;
-      color: #275238;
+      color: #122017;
+      word-wrap: break-word;
+      margin-bottom: 56px;
     }
     
     .banner-area {
@@ -145,7 +151,6 @@
     }
     
     .digit {
-      font-family: Abhaya Libre;
       font-size: 64px;
       font-weight: 700;
       line-height: 76px;
@@ -198,7 +203,21 @@
       justify-content: center;
       flex-direction: column;
     }
+
+    #player{
+      position: fixed;
+      bottom: 10px;
+      left: 40px;
+      z-index: 99999;
+    }
     @media (max-width: 576px) {
+      #navItemHeader{
+        position: absolute;
+        padding: 0;
+      }
+      .offcanvas.show{
+        width: 70%;
+      }
       .hero-area{
         height: 75vh;
       }
@@ -226,11 +245,14 @@
         line-height: 37px;
         padding-right: 50px;
         padding-left: 50px;
+        margin-bottom: 16px;
       }
       
       .bodyText {
         font-size: 16px;
         line-height: 24px;
+        margin-bottom: 32px;
+  
       }
       
       .playerText{
@@ -241,9 +263,11 @@
         position: inherit;
         bottom: inherit;
         width: 100%;
-        
+        left: inherit;
       }
-      
+      .player{
+        background-color: rgb(1, 13, 5,0.5);
+      }
     }
   
   </style>
@@ -251,10 +275,10 @@
 <body>
 <div class="container">
   <div class="row">
-    <div class="col col-11 col-sm-2" id="logoHeader">
+    <div class="col col-12 col-sm-2" id="logoHeader">
       Khoa & Vy
     </div>
-    <div class="col col-1 col-sm-10 " id="navItemHeader">
+    <div class="col col-sm-10 " id="navItemHeader">
       <nav class="navbar navbar-expand-lg  float-end">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -263,13 +287,16 @@
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div class="offcanvas-header " style="padding: 8px">
+              <div style="width: 100%; text-align: right; display: block">
+                <button type="button" class="btn-close pull-right" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+              </div>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link navItemHeader active" aria-current="page" href="#">Trang chủ</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link navItemHeader" href="/pointsOfInterest.html">Gửi lời chúc</a>
@@ -278,7 +305,7 @@
                   <a class="nav-link navItemHeader" href="/album.html">Album</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader" href="/info.html">Thông tin tiệc và lễ</a>
+                  <a class="nav-link navItemHeader" href="/info.html">Thông tin Lễ & Tiệc</a>
                 </li>
               </ul>
             </div>
@@ -289,19 +316,24 @@
   </div>
   <div class="row">
     <div class="col col-12">
-      <div class=" text-center ">
-        <p class="headerText">Vun đắp kỷ niệm - Xây dựng gia đình</p>
-        <p class="bodyText">
-          <img src="image/quote_left.png" height="18">
-          Nếu có một ngày, chúng ta kết hôn, em chỉ hy vọng
-          rằng, đó chính là vì tình yêu.
-          Ở thời điểm phù hợp nhất, mặc lên người bộ váy cưới đẹp nhất, gả cho người đáng tin cậy nhất.
-          <img src="image/quote_right.png" height="18">
-        
-        </p>
+      <div class="headerText d-flex align-items-center justify-content-center">
+        Vun đắp kỷ niệm - Xây dựng gia đình
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col col-12">
+      <div class="bodyText  d-flex align-items-center justify-content-center">
+        <div style="max-width: 700px;">
+          <img src="image/quote_left.png" height="18">
+          “Một ngày nào đó trên thế giới rộng lớn này, chúng ta sẽ gặp được một người thuộc về riêng mình. Một người
+          bạn, một nửa tâm hồn, người mà chúng ta có thể kể cho họ nghe về những giấc mơ của mình”
+          <img src="image/quote_right.png" height="18">
+        
+        </div>
+    </div>
+  </div>
+</div>
   <div class="row"  id="home">
     <section class="banner-area hero-area position-relative ">
       <div class="banner-content-wrap hero-content-wrap"></div>
@@ -339,7 +371,7 @@
 </svg>
           </span>
             </div>
-            <audio id="playerAudio" autoplay src="https://cdn.biihappy.com/ziiweb/wedding-musics/Perfect-EdSheeran-6445593.mp3" controls="controls" style="display: none;" loop></audio>
+            <audio id="playerAudio" loop src="https://cdn.biihappy.com/ziiweb/wedding-musics/Perfect-EdSheeran-6445593.mp3" controls="controls" style="display: none;" ></audio>
           </div>
           <div class="playerText ">
             <div id="songName">Wedding Song</div>
