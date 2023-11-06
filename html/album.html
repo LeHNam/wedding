@@ -82,16 +82,27 @@
     }
 
     .slick-active {
-      padding: 30px 0;
     }
 
     .slick-center {
       transform: scale(1.08)
+  
     }
 
     .slick-slide:not(.slick-active) {
-      margin: 30px 0px;
+      padding: 50px 0px;
     }
+
+    .slick-center > img{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .slick-slide:not(.slick-active) >img {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;    }
 
     .child {
       width:100%;
@@ -201,13 +212,15 @@
       </nav>
     </div>
   </div>
-  <div class="center desktop" style="margin-top: 50px">
-    <div><img src="/image/KHOA VY 25X35_02.jpg" class="d-block w-100" alt="..."></div>
-    <div><img src="/image/KHOA VY 25X35_05.jpg" class="d-block w-100" alt="..."></div>
-    <div><img src="/image/KHOA VY 25X35_06.jpg" class="d-block w-100" alt="..."></div>
-    <div><img src="/image/KHOA VY 25X35_10.jpg" class="d-block w-100" alt="..."></div>
-    <div><img src="/image/KHOA VY 25X35_11.jpg" class="d-block w-100" alt="..."></div>
-    <div><img src="/image/KHOA VY 25X35_13.jpg" class="d-block w-100" alt="..."></div>
+  <div class="row desktop">
+  <div class="center col" style="margin-top: 50px">
+    <div class="text-center"><img src="/image/KHOA VY 25X35_02.jpg" class="d-block " alt="..."></div>
+    <div class="text-center"><img src="/image/KHOA VY 25X35_05.jpg" class="d-block " alt="..."></div>
+    <div class="text-center"><img src="/image/KHOA VY 25X35_06.jpg" class="d-block " alt="..."></div>
+    <div class="text-center" ><img src="/image/KHOA VY 25X35_10.jpg" class="d-block " alt="..."></div>
+    <div class="text-center"><img src="/image/KHOA VY 25X35_11.jpg" class="d-block " alt="..."></div>
+    <div class="text-center"><img src="/image/KHOA VY 25X35_13.jpg" class="d-block " alt="..."></div>
+  </div>
   </div>
   <div class=" mobile" style="margin-top: 50px">
     <div><img src="/image/KHOA VY 25X35_02.jpg" class="d-block w-100" alt="..."></div>
@@ -222,7 +235,7 @@
   
   $('.center').slick({
     centerMode: true,
-    centerPadding: '200px',
+    centerPadding: '300px',
     slidesToShow: 1,
   });
 
