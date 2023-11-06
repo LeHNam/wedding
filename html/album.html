@@ -15,6 +15,7 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
   
   <style>
     .container {
@@ -77,6 +78,27 @@
     }
     .desktop{
       display: block;
+      
+    }
+
+    .slick-active {
+      padding: 30px 0;
+    }
+
+    .slick-center {
+      transform: scale(1.08)
+    }
+
+    .slick-slide:not(.slick-active) {
+      margin: 30px 0px;
+    }
+
+    .child {
+      width:100%;
+    }
+
+    .slide:not(.slick-active) {
+      cursor: pointer;
     }
     @media (max-width: 576px) {
       #navItemHeader{
@@ -104,6 +126,7 @@
     .slick-prev:hover:before {
       content: '←';
       text-align: center;
+      font-family: 'Font Awesome\ 6 Free';
     }
     .slick-prev:hover{
       z-index: 999999;
@@ -129,6 +152,7 @@
     .slick-next:hover:before{
       content: '→';
       text-align: center;
+      font-family: 'Font Awesome\ 6 Free';
     }
 
 
@@ -178,23 +202,28 @@
     </div>
   </div>
   <div class="center desktop" style="margin-top: 50px">
-    <div><img src="/image/album_1.png" class="d-block w-100" alt="..."></div>
-    <div><img src="image/album_2.png" class="d-block w-100" alt="..."></div>
-    <div><img src="image/album_3.png" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_02.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_05.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_06.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_10.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_11.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_13.jpg" class="d-block w-100" alt="..."></div>
   </div>
   <div class=" mobile" style="margin-top: 50px">
-    <div><img src="/image/album_1.png" class="d-block w-100" alt="..."></div>
-    <div><img src="image/album_2.png" class="d-block w-100" alt="..."></div>
-    <div><img src="image/album_3.png" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_02.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_05.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_06.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_10.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_11.jpg" class="d-block w-100" alt="..."></div>
+    <div><img src="/image/KHOA VY 25X35_13.jpg" class="d-block w-100" alt="..."></div>
   </div>
 </div>
 <script>
   
   $('.center').slick({
     centerMode: true,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    arrows: true,
+    centerPadding: '200px',
+    slidesToShow: 1,
   });
 
 </script>
