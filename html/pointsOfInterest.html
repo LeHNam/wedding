@@ -213,28 +213,78 @@
       </div>
     </div>
   </div>
+  <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 20px; right: 20px; z-index: 99999;width: 400px">
+    <div class="d-flex">
+      <div class="toast-body">
+        <div style="font-family: Baskerville;
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+">Tin nhắn đã được gửi đến Vy&Khoa thành công.</div>
+        <div style="font-family: Baskerville;
+font-size: 13px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: -0.011em;
+text-align: left;
+">Chân thành cảm ơn.   </div>   </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+  
   <div class="row">
-      <div class=" d-flex justify-content-center text-center   ">
-        <form id="formInterest">
-          <div class="mb-40px">
+  
+    <div class=" d-flex justify-content-center text-center   ">
+      <form id="formInterest"  target="_self" method="POST">
+        <div class="mb-40px">
             <label for="from" class="form-label">Từ</label>
-            <input type="text" class="form-control" id="from" placeholder="Tên của bạn">
+            <input type="text" name="entry.1496497757" class="form-control" id="from" placeholder="Tên của bạn" required >
           </div>
           <div class="mb-40px">
             <label for="to" class="form-label">Gửi đến</label>
-            <input type="text" class="form-control" id="to" placeholder="Tên người nhận ">
+            <input type="text" name="entry.1729076589" class="form-control" id="to" placeholder="Tên người nhận" required >
           </div>
           <div class="mb-40px ">
             <label for="message" class="form-label">Lời chúc</label>
-            <input type="text" class="form-control" id="message" placeholder="Nội dung lời chúc bạn muốn gửi gắm ">
+            <input type="text" name="entry.613570501" class="form-control" id="message" placeholder="Nội dung lời chúc bạn muốn gửi gắm" required>
           </div>
           <button type="submit" class="btn btn-primary" id="submitBtn">Gửi đi</button>
         </form>
-      </div>
+        </div>
     </div>
   </div>
 </div>
 <script>
+  $(document).ready(function () {
+    $("#formInterest").submit(function (event) {
+      var formData = {
+        'entry.1496497757': $("#from").val(),
+        'entry.1729076589': $("#to").val(),
+        'entry.613570501': $("#message").val(),
+      };
+      
+      $.ajax({
+        type: "POST",
+        url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSexwgsKP9hSAKcDQPot-cxuaDzm44SdOV5rjbN7ga2sJUowYA/formResponse',
+        data: formData,
+        dataType: "json",
+        encode: true,
+        complete: function (err) {
+          var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+          var toastList = toastElList.map(function(toastEl) {
+            return new bootstrap.Toast(toastEl)
+          })
+          toastList.forEach(toast => toast.show())
+  
+  
+        }
+      });
+      
+      event.preventDefault();
+    });
+  });
 </script>
 </body>
 
