@@ -10,15 +10,22 @@
           integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
           crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
+  
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+  
   <style>
     .container {
       max-width: 100%;
     }
-    .container{
+    
+    .container {
       font-family: Baskerville;
     }
-
+    
     #logoHeader {
       font-size: 32px;
       font-weight: 400;
@@ -144,7 +151,7 @@
       color: #FFFFFF;
       border-radius: 40px;
       margin: 30px;
-      background-color:  #010D0580;
+      background-color: #010D0580;
       padding: 32px 36px;
       max-width: 490px;
       
@@ -163,18 +170,20 @@
       bottom: 0px;
       margin: 10px;
     }
-    .player{
+    
+    .player {
       width: 88px;
       height: 88px;
       background-color: #010D05;
       border-radius: 50%;
     }
-    .playerText{
+    
+    .playerText {
       padding-left: 20px;
       padding-top: 20px;
     }
     
-    #songName{
+    #songName {
       font-family: Baskerville;
       font-size: 20px;
       font-weight: 600;
@@ -185,7 +194,8 @@
       
       
     }
-    #songLyrics{
+    
+    #songLyrics {
       font-family: Baskerville;
       font-size: 13px;
       font-weight: 400;
@@ -193,7 +203,7 @@
       letter-spacing: 0em;
       text-align: left;
       color: #F4F4F5;
-      background-color:  #010D0580;
+      background-color: #010D0580;
       display: flex;
       margin-bottom: 20px;
       /* width: 90%; */
@@ -203,24 +213,28 @@
       justify-content: center;
       flex-direction: column;
     }
-
-    #player{
+    
+    #player {
       position: fixed;
       bottom: 10px;
       left: 40px;
       z-index: 99999;
     }
+    
     @media (max-width: 576px) {
-      #navItemHeader{
+      #navItemHeader {
         position: absolute;
         padding: 0;
       }
-      .offcanvas.show{
+      
+      .offcanvas.show {
         width: 70%;
       }
-      .hero-area{
+      
+      .hero-area {
         height: 75vh;
       }
+      
       .hero-content-wrap {
         background-image: url(/image/banner_mobile.png);
       }
@@ -232,6 +246,7 @@
         line-height: 24px;
         
       }
+      
       .digit {
         font-size: 32px;
         line-height: 38px;
@@ -252,10 +267,10 @@
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 32px;
-  
+        
       }
       
-      .playerText{
+      .playerText {
         display: none;
       }
       
@@ -265,14 +280,332 @@
         width: 100%;
         left: inherit;
       }
-      .player{
-        background-color: rgb(1, 13, 5,0.5);
+      
+      .player {
+        background-color: rgb(1, 13, 5, 0.5);
+      }
+    }
+    
+    .mobile {
+      display: none;
+    }
+    
+    .desktop {
+      display: block;
+      
+    }
+    
+    .slick-active {
+    }
+    
+    .slick-center {
+      transform: scale(1.08)
+      
+    }
+    
+    .slick-slide:not(.slick-active) {
+      padding: 50px 0px;
+    }
+    
+    .slick-center > img {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .slick-slide:not(.slick-active) > img {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .child {
+      width: 100%;
+    }
+    
+    .slide:not(.slick-active) {
+      cursor: pointer;
+    }
+    
+    @media (max-width: 576px) {
+      #navItemHeader {
+        position: absolute;
+        padding: 0;
+      }
+      
+      .offcanvas.show {
+        width: 70%;
+      }
+      
+      .mobile {
+        display: block;
+      }
+      
+      .desktop {
+        display: none;
+      }
+    }
+    
+    .slick-prev {
+      height: 100%;
+      width: 80px;
+    }
+    
+    .slick-prev:before {
+      content: '';
+    }
+    
+    .slick-prev:hover:before {
+      content: '←';
+      text-align: center;
+      font-family: 'Font Awesome\ 6 Free';
+    }
+    
+    .slick-prev:hover {
+      z-index: 999999;
+      height: 100%;
+      width: 80px;
+      background-color: #010D0533;
+    }
+    
+    .slick-next {
+      height: 100%;
+      width: 80px;
+    }
+    
+    .slick-next:before {
+      content: '';
+    }
+    
+    .slick-next:hover {
+      z-index: 999999;
+      height: 100%;
+      width: 80px;
+      background-color: #010D0533;
+    }
+    
+    .slick-next:hover:before {
+      content: '→';
+      text-align: center;
+      font-family: 'Font Awesome\ 6 Free';
+    }
+    
+    
+    @media (max-width: 576px) {
+      #navItemHeader {
+        position: absolute;
+        padding: 0;
+      }
+      
+      .offcanvas.show {
+        width: 70%;
+      }
+      
+      #formInterest {
+        width: 90%;
+      }
+      
+      .headerText {
+        font-size: 32px;
+        line-height: 37px;
+        padding-right: 50px;
+        padding-left: 50px;
+        margin-bottom: 16px;
+      }
+      
+      .bodyText {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 32px;
+        
+      }
+      
+    }
+    
+    #formInterest {
+      width: 480px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #565660;
+      word-wrap: break-word
+      
+    }
+    
+    .mb-40px {
+      margin-bottom: 40px;
+    }
+    
+    #submitBtn {
+      height: 40px;
+      padding: 7.5px 14px 7.5px 14px;
+      border-radius: 8px;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0em;
+      background-color: #336B49;
+      color: #FFFFFF;
+      width: 100%;
+    }
+    
+    #phanThietHeader {
+      width: 100%;
+      text-align: right;
+      margin-bottom: 40px;
+    }
+    
+    .nav-pills .nav-link.active {
+      width: 113px;
+      height: 40px;
+      padding: 7.5px 14px 7.5px 14px;
+      border-radius: 8px;
+      gap: 8px;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0em;
+      background-color: #336B49;
+      color: #FFFFFF;
+    }
+    
+    #saiGonHeader {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    
+    .nav-pills .nav-link {
+      width: 113px;
+      height: 40px;
+      padding: 7.5px 14px 7.5px 14px;
+      border-radius: 8px;
+      gap: 8px;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0em;
+      background-color: #FFFFFF;
+      color: #336B49;
+      border: 1px solid #27A35E;
+    }
+    
+    .text1 {
+      font-family: Baskerville;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #275238;
+    }
+    
+    .text1 {
+      font-family: Baskerville;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #275238;
+    }
+    
+    .text2 {
+      font-family: Baskerville;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #275238;
+    }
+    
+    .text3 {
+      font-family: Baskerville;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+      
+      color: #275238;
+    }
+    
+    .text4 {
+      font-family: Baskerville;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 23px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #275238;
+    }
+    
+    .text5 {
+      font-family: Baskerville;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #275238;
+    }
+    
+    #phanThietBody {
+      border-right: 1px solid #27A35E;
+    }
+    
+    
+    @media (max-width: 576px) {
+      
+      #navItemHeader {
+        position: absolute;
+        padding: 0;
+      }
+      
+      .offcanvas.show {
+        width: 70%;
+      }
+      
+      #phanThietHeader {
+        text-align: center;
+      }
+      
+      #saiGonHeader {
+        text-align: center;
+      }
+      
+      #phanThietBody {
+        border-right: 0px solid #27A35E;
+      }
+      
+      #phanThietBody:after {
+        display: block;
+        content: '';
+        border-bottom: 1px solid #27A35E;
+        width: 100%;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        
       }
     }
   
+  
+    section {
+      position: relative;
+      padding: 70px 0;
+      background-color: #fff;
+      z-index: 0;
+    }
   </style>
 </head>
 <body>
+
 <div class="container">
   <div class="row">
     <div class="col col-12 col-sm-2" id="logoHeader">
@@ -296,16 +629,16 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader active" aria-current="page" href="#">Trang chủ</a>
+                  <a class="nav-link navItemHeader active" aria-current="page" href="#home">Trang chủ</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader" href="/pointsOfInterest.html">Gửi lời chúc</a>
+                  <a class="nav-link navItemHeader" href="#pointsOfInterest">Gửi lời chúc</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader" href="/album.html">Album</a>
+                  <a class="nav-link navItemHeader" href="#album">Album</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link navItemHeader" href="/info.html">Thông tin Lễ & Tiệc</a>
+                  <a class="nav-link navItemHeader" href="#info">Thông tin Lễ & Tiệc</a>
                 </li>
               </ul>
             </div>
@@ -331,11 +664,10 @@
           <img src="image/quote_right.png" height="18">
         
         </div>
+      </div>
     </div>
   </div>
-</div>
-  <div class="row"  id="home">
-    <section class="banner-area hero-area position-relative ">
+    <section class="banner-area hero-area position-relative "  id="home">
       <div class="banner-content-wrap hero-content-wrap"></div>
       <div class="banner-content hero-content">
         <div id="countdown" class="row">
@@ -353,34 +685,293 @@
             <span class="">seconds</span></div>
         </div>
         <div class="d-flex align-items-center justify-content-center" id="player">
-          <div class="player" >
-            <div onclick="playPause();" class="playerIcon" >
+          <div class="player">
+            <div onclick="playPause();" class="playerIcon">
         <span id="playerVolumeOff">
 <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="44" cy="44" r="44" fill="white" fill-opacity="0.1"/>
 <circle cx="44" cy="44" r="28.75" fill="white" fill-opacity="0.1" stroke="white" stroke-width="0.5"/>
-<path d="M37.4375 35.5234C38.0234 35.1719 38.7656 35.1719 39.3516 35.5625L50.6016 42.3984C51.1484 42.75 51.5 43.375 51.5 44C51.5 44.6641 51.1484 45.2891 50.6016 45.6016L39.3516 52.4766C38.7656 52.8281 38.0234 52.8672 37.4375 52.5156C36.8516 52.2031 36.5 51.5781 36.5 50.875V37.125C36.5 36.4609 36.8516 35.8359 37.4375 35.5234ZM38.375 50.875L49.625 44L38.375 37.125V50.875Z" fill="#F4F4F5"/>
+<path
+    d="M37.4375 35.5234C38.0234 35.1719 38.7656 35.1719 39.3516 35.5625L50.6016 42.3984C51.1484 42.75 51.5 43.375 51.5 44C51.5 44.6641 51.1484 45.2891 50.6016 45.6016L39.3516 52.4766C38.7656 52.8281 38.0234 52.8672 37.4375 52.5156C36.8516 52.2031 36.5 51.5781 36.5 50.875V37.125C36.5 36.4609 36.8516 35.8359 37.4375 35.5234ZM38.375 50.875L49.625 44L38.375 37.125V50.875Z"
+    fill="#F4F4F5"/>
 </svg>
   
         </span>
-              <span  id="playerVolumeOn"  style="display:none;">
+              <span id="playerVolumeOn" style="display:none;">
 <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="44" cy="44" r="44" fill="white" fill-opacity="0.1"/>
 <circle cx="44" cy="44" r="28.75" fill="white" fill-opacity="0.1" stroke="white" stroke-width="0.5"/>
-<path d="M39.9375 36.5C40.4453 36.5 40.875 36.9297 40.875 37.4375V50.5625C40.875 51.1094 40.4453 51.5 39.9375 51.5C39.3906 51.5 39 51.1094 39 50.5625V37.4375C39 36.9297 39.3906 36.5 39.9375 36.5ZM48.0625 36.5C48.5703 36.5 49 36.9297 49 37.4375V50.5625C49 51.1094 48.5703 51.5 48.0625 51.5C47.5156 51.5 47.125 51.1094 47.125 50.5625V37.4375C47.125 36.9297 47.5156 36.5 48.0625 36.5Z" fill="#F4F4F5"/>
+<path
+    d="M39.9375 36.5C40.4453 36.5 40.875 36.9297 40.875 37.4375V50.5625C40.875 51.1094 40.4453 51.5 39.9375 51.5C39.3906 51.5 39 51.1094 39 50.5625V37.4375C39 36.9297 39.3906 36.5 39.9375 36.5ZM48.0625 36.5C48.5703 36.5 49 36.9297 49 37.4375V50.5625C49 51.1094 48.5703 51.5 48.0625 51.5C47.5156 51.5 47.125 51.1094 47.125 50.5625V37.4375C47.125 36.9297 47.5156 36.5 48.0625 36.5Z"
+    fill="#F4F4F5"/>
 </svg>
           </span>
             </div>
-            <audio id="playerAudio" loop src="/audio/Christina_Perri_-_A_Thousand_Years_CeeNaija.com_.mp3" controls="controls" style="display: none;" ></audio>
+            <audio id="playerAudio" loop src="/audio/Christina_Perri_-_A_Thousand_Years_CeeNaija.com_.mp3"
+                   controls="controls" style="display: none;"></audio>
           </div>
         </div>
       
       </div>
     </section>
+  <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 20px; right: 20px; z-index: 99999;width: 400px">
+    <div class="d-flex">
+      <div class="toast-body">
+        <div style="font-family: Baskerville;
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+">Tin nhắn đã được gửi đến Vy&Khoa thành công.</div>
+        <div style="font-family: Baskerville;
+font-size: 13px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: -0.011em;
+text-align: left;
+">Chân thành cảm ơn.   </div>   </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
   </div>
   
+  <section class="row" id="pointsOfInterest">
+    <div class="row">
+      <div class="col col-12">
+        <div class="headerText d-flex align-items-center justify-content-center">
+          Gửi lời chúc
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-12">
+        <div class="bodyText  d-flex align-items-center justify-content-center">
+          <div style="max-width: 700px;">
+            <img src="image/quote_left.png" height="18">
+            Một lời chúc chân thành không chỉ đơn giản là lời nói, đó là món quà tinh thần tràn đầy ý nghĩa được gửi gắm
+            từ một trái tim biết yêu thương và quan tâm.
+            <img src="image/quote_right.png" height="18">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true"
+         style="position: absolute; top: 20px; right: 20px; z-index: 99999;width: 400px">
+      <div class="d-flex">
+        <div class="toast-body">
+          <div style="font-family: Baskerville;
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+">Tin nhắn đã được gửi đến Vy&Khoa thành công.
+          </div>
+          <div style="font-family: Baskerville;
+font-size: 13px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: -0.011em;
+text-align: left;
+">Chân thành cảm ơn.
+          </div>
+        </div>
+        <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="row">
+      
+      <div class=" d-flex justify-content-center text-center   ">
+        <form id="formInterest" target="_self" method="POST">
+          <div class="mb-40px">
+            <label for="from" class="form-label">Từ</label>
+            <input type="text" name="entry.1496497757" class="form-control" id="from" placeholder="Tên của bạn"
+                   required>
+          </div>
+          <div class="mb-40px">
+            <label for="to" class="form-label">Gửi đến</label>
+            <input type="text" name="entry.1729076589" class="form-control" id="to" placeholder="Tên người nhận"
+                   required>
+          </div>
+          <div class="mb-40px ">
+            <label for="message" class="form-label">Lời chúc</label>
+            <input type="text" name="entry.613570501" class="form-control" id="message"
+                   placeholder="Nội dung lời chúc bạn muốn gửi gắm" required>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">Gửi đi</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="row" id="album">
+    <div class="row">
+      <div class="col col-12">
+        <div class="headerText d-flex align-items-center justify-content-center">
+          Album Hình Cưới
+          </div>
+      </div>
+    </div>
+    <div class="row desktop">
+      <div class="center col" style="margin-top: 50px">
+        <div class="text-center"><img src="/image/KHOA VY 25X35_02.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img src="/image/KHOA VY 25X35_05.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img src="/image/KHOA VY 25X35_06.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img src="/image/KHOA VY 25X35_10.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img src="/image/KHOA VY 25X35_11.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img src="/image/KHOA VY 25X35_13.jpg" class="d-block " alt="..."></div>
+      </div>
+    </div>
+    <div class=" mobile" style="margin-top: 50px">
+      <div><img src="/image/KHOA VY 25X35_02.jpg" class="d-block w-100" alt="..."></div>
+      <div><img src="/image/KHOA VY 25X35_05.jpg" class="d-block w-100" alt="..."></div>
+      <div><img src="/image/KHOA VY 25X35_06.jpg" class="d-block w-100" alt="..."></div>
+      <div><img src="/image/KHOA VY 25X35_10.jpg" class="d-block w-100" alt="..."></div>
+      <div><img src="/image/KHOA VY 25X35_11.jpg" class="d-block w-100" alt="..."></div>
+      <div><img src="/image/KHOA VY 25X35_13.jpg" class="d-block w-100" alt="..."></div>
+    </div>
+  </section>
+  <section class="row" id="info">
+    <div class="row">
+      <div class="col col-12">
+        <div class=" text-center ">
+          <p class="headerText">Sự Kiện</p>
+          <p>
+            <svg color="#275238" width="170" height="18" viewBox="0 0 170 18" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_86_290)">
+                <path
+                    d="M78.7991 14.3894C67.0367 7.59997 53.3755 5.47365 40.254 8.41049C37.5757 9.01049 34.9175 9.76839 32.2492 10.5158C32.2192 10.4421 32.1492 10.3789 32.0493 10.3579C28.7415 9.50523 23.8646 7.41049 25.3437 2.82102C25.4636 2.46312 24.9039 2.19997 24.754 2.55786C24.744 2.58944 24.734 2.61049 24.7241 2.64207C22.9852 6.64207 25.0139 10.5263 28.7814 11.4631C25.3137 12.3684 21.8259 13.1263 18.2582 13.3368C14.4407 13.5579 10.4133 13.1368 6.92557 11.3684C5.37657 10.5789 3.9475 9.47365 2.81823 8.10523C1.99876 7.10523 1.3192 5.95786 0.989412 4.68418C0.819522 4.14734 0.739574 3.58944 0.739574 3.01049C0.659625 0.547335 1.50908 0.999967 3.28792 4.37891C2.99811 4.6947 3.44782 5.17891 3.74763 4.86312C6.63576 1.78944 1.69895 -1.89477 0.339832 1.12628C-0.629541 3.28418 0.629645 6.26312 1.85885 7.95786C3.53776 10.2947 5.94621 11.8631 8.55452 12.7894C13.8211 14.6736 19.3775 14.221 24.754 13.0947C24.794 13.1579 24.844 13.221 24.9439 13.2421C31.3098 15.1789 37.9555 15.8 44.5412 14.9684C47.5393 14.5894 50.4974 13.9158 53.3755 12.9473C56.9732 11.7368 60.371 9.6947 64.2285 9.61049C64.2984 9.61049 64.3484 9.58944 64.3884 9.55786C66.2072 9.66312 67.5164 11.021 67.8861 13C68.016 13.7052 68.056 14.3368 67.8961 14.9158C66.6869 16.0315 65.5876 15.7263 64.1385 15.1368C63.6489 14.9368 63.2091 14.6947 62.6695 14.7579C61.9799 14.8315 61.4203 15.3158 61.3703 16.0737C61.1705 18.8736 64.8681 17.9052 66.2172 17.5158C67.5164 17.1473 68.2259 16.3263 68.5057 15.2842C68.5957 15.1894 68.6057 15.0842 68.5857 14.9789C68.7256 14.2 68.6656 13.3052 68.4258 12.3789C68.1759 11.421 67.7262 10.6421 67.1166 10.0631C71.0541 11.2631 74.8716 12.8947 78.4893 14.9894C78.859 15.2 79.1888 14.6105 78.8191 14.4L78.7991 14.3894ZM65.008 17.1368C64.7781 17.2 63.7088 17.5579 63.5889 17.4105C63.6589 16.8526 63.7388 16.2947 63.8088 15.7263C63.9687 15.8105 64.1286 15.8947 64.2885 15.9894C64.7282 16.0526 65.1279 16.3684 65.6076 16.421C66.1173 16.4736 66.587 16.4 67.0367 16.2315C66.4271 16.7789 65.8375 16.9263 65.008 17.1368ZM52.636 7.75786C56.1837 7.79997 59.7014 8.23155 63.1392 8.99997C62.7195 9.04207 62.2997 9.11576 61.89 9.19997C56.4835 9.16839 51.1969 10.2947 45.8804 11.2737C42.6025 11.8736 39.3046 12.3894 35.9768 12.4842C32.7489 12.5789 29.5409 12.3684 26.323 12.7473C27.4123 12.4947 28.4916 12.221 29.5509 11.9368C37.206 9.91576 44.6611 7.6526 52.636 7.75786ZM24.764 6.18944C24.824 6.33681 24.874 6.47365 24.9439 6.61049C24.9039 6.62102 24.874 6.63155 24.834 6.6526C24.804 6.4947 24.784 6.34734 24.764 6.18944ZM27.8121 9.63154C27.4223 9.39997 27.0825 9.11576 26.8227 8.73681C27.7921 9.46312 28.9413 10.0315 30.0806 10.4526C29.3611 10.3684 28.4616 9.95786 27.8021 9.63154H27.8121ZM26.293 12.7473C26.2231 12.7579 26.1931 12.8105 26.1731 12.8736C26.1132 12.8526 26.0432 12.8421 25.9832 12.821C26.0832 12.8 26.1931 12.7684 26.293 12.7473ZM46.2301 14.0315C39.7144 15.1263 33.0886 14.7263 26.7128 13.021C32.539 12.4 38.3352 12.8947 44.1615 11.8947C49.6279 10.9579 55.0544 9.68418 60.5908 9.52628C58.9519 9.99997 57.3629 10.6947 55.734 11.3473C52.656 12.5789 49.478 13.4842 46.2301 14.021V14.0315Z"
+                    fill="#333333"/>
+                <path
+                    d="M166.342 4.87363C166.632 5.18942 167.092 4.70521 166.802 4.38942C168.581 1.01047 169.43 0.557839 169.35 3.021C169.3 3.4631 169.25 3.90521 169.2 4.34731C168.951 5.53679 168.381 6.57889 167.691 7.53679C166.582 9.08415 165.133 10.3157 163.504 11.1999C159.956 13.1263 155.769 13.5789 151.842 13.3473C148.274 13.1368 144.776 12.3789 141.319 11.4736C145.096 10.5368 147.115 6.65258 145.376 2.65258C145.366 2.621 145.356 2.59994 145.346 2.56837C145.186 2.221 144.636 2.4631 144.756 2.83152C146.225 7.41047 141.348 9.51573 138.051 10.3684C137.951 10.3894 137.891 10.4526 137.851 10.5263C135.182 9.77889 132.524 9.021 129.846 8.421C116.724 5.48415 103.053 7.59994 91.3009 14.3999C90.9311 14.6105 91.2609 15.1999 91.6307 14.9894C95.2583 12.8947 99.0858 11.2315 103.043 10.0315C102.424 10.6105 101.954 11.3999 101.694 12.3789C101.454 13.3157 101.384 14.1999 101.534 14.9894C101.504 15.0842 101.524 15.1894 101.604 15.2842C101.884 16.3368 102.594 17.1473 103.893 17.5263C105.242 17.9157 108.939 18.8736 108.74 16.0842C108.68 15.3157 108.13 14.8526 107.44 14.7684C107.011 14.7157 106.611 14.8736 106.221 15.042C104.702 15.6736 103.513 16.1789 102.164 14.8842C102.094 14.421 102.124 13.9263 102.184 13.4315C102.454 11.2842 103.753 9.68415 105.732 9.56837C105.782 9.59994 105.831 9.621 105.901 9.621C109.619 9.69468 112.867 11.6105 116.325 12.8105C119.333 13.8526 122.441 14.5789 125.579 14.9789C132.164 15.821 138.81 15.1894 145.176 13.2526C145.256 13.2315 145.306 13.1789 145.346 13.1157C149.763 14.0526 154.25 14.5157 158.677 13.5999C163.544 12.5999 169.98 9.10521 170.03 3.021C170.07 -2.66321 162.984 1.27363 166.372 4.87363H166.342ZM104.253 16.4526C104.712 16.4315 105.122 16.2947 105.542 16.1157C106.271 15.7999 106.221 15.3894 106.381 16.5789C106.741 17.3368 106.621 17.5999 106.031 17.3473C105.702 17.3157 105.382 17.2526 105.072 17.1473C104.542 17.0105 103.903 16.9157 103.403 16.6736C103.063 16.5052 102.803 16.2947 102.604 16.042C103.103 16.3157 103.643 16.4736 104.243 16.4526H104.253ZM145.246 6.6631C145.246 6.6631 145.176 6.63152 145.136 6.621C145.206 6.48415 145.256 6.34731 145.316 6.21047C145.296 6.36836 145.276 6.51573 145.246 6.6631ZM142.248 9.65258C141.588 9.97889 140.709 10.3789 139.999 10.4631C141.139 10.042 142.288 9.48415 143.257 8.74731C142.997 9.13679 142.648 9.421 142.248 9.65258ZM137.481 11.1157C139.51 11.6736 141.578 12.2526 143.667 12.7473C140.639 12.4105 137.611 12.5684 134.573 12.5052C131.085 12.4315 127.637 11.9157 124.21 11.2842C118.893 10.3052 113.606 9.18942 108.2 9.21047C107.79 9.12626 107.38 9.05258 106.961 9.01047C109.439 8.4631 111.948 8.07363 114.486 7.89468C122.401 7.33679 129.886 9.01047 137.491 11.1157H137.481ZM123.86 14.042C120.612 13.4947 117.434 12.5894 114.356 11.3684C112.717 10.7157 111.138 10.0315 109.499 9.54731C115.036 9.70521 120.452 10.9789 125.928 11.9157C131.755 12.9052 137.551 12.421 143.377 13.042C137.001 14.7473 130.376 15.1368 123.86 14.0526V14.042ZM143.917 12.8842C143.917 12.8842 143.887 12.8105 143.847 12.7894C143.927 12.8105 143.997 12.821 144.077 12.842C144.027 12.8526 143.967 12.8736 143.917 12.8842Z"
+                    fill="#333333"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_86_290">
+                  <rect width="170" height="18" fill="white"/>
+                </clipPath>
+              </defs>
+            </svg>
+          
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex">
+      <ul class="nav nav-pills mb-3 list-inline mx-auto justify-content-center" id="pills-tab" role="tablist" style="    padding-right: 0px;
+">
+        <li class="nav-item" role="presentation" style="margin-right: 12px">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                  type="button" role="tab" aria-controls="pills-home" aria-selected="true">Ninh Thuận
+          </button>
+        </li>
+        <li class="nav-item" role="presentation" style="margin-left: 12px">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                  type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Sài Gòn
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+             tabindex="0">
+          <div class="row">
+            <div class="col col-12 col-sm-6" id="phanThietBody">
+              <div class=" row ">
+                <p class="text1">
+                  Hôn lễ
+                </p>
+                <p class="text2">
+                  THỨ BẢY, NGÀY 02 THÁNG 12 NĂM 2023 </p>
+                <p class="text3">
+                  (Nhằm ngày 20 tháng 10 năm Quý Mão) </p>
+                <p class="text4">
+                  14:00 PM </p>
+                <p class="text5">
+                  Tư gia
+                </p>
+              </div>
+            </div>
+            <div class="col col-12 col-sm-6">
+              <div class=" row ">
+                <p class="text1">
+                  Tiệc cưới
+                </p>
+                <p class="text2">
+                  THỨ BẢY, NGÀY 02 THÁNG 12 NĂM 2023 </p>
+                <p class="text3">
+                  (Nhằm ngày 20 tháng 10 năm Quý Mão) </p>
+                <p class="text4">
+                  17:00 PM </p>
+                <p class="text5">
+                  Sảnh Queen - Nhà hàng tiệc cưới Sunrise Palace
+                  283 Ngô Gia Tự, Phường Tấn Tài, TP. PR-TC, Tỉnh Ninh Thuận
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+          <div class="row">
+            <div class="col col-12 col-sm-12">
+              <div class=" row ">
+                <p class="text1">
+                  Tiệc báo hỷ
+                </p>
+                <p class="text2">
+                  THỨ BẢY, NGÀY 16 THÁNG 12 NĂM 2023 </p>
+                <p class="text3">
+                  (Nhằm ngày 04 tháng 11 năm Quý Mão)</p>
+                <p class="text4">
+                  18:00 PM </p>
+                <p class="text5">
+                  Sảnh Bella Vita, Amor Resort - Wedding & Event Garden
+                  61A Nguyễn Văn Đậu, Phường 6, Quận Bình Thạnh, TP. HCM
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <script>
+  $('.center').slick({
+    centerMode: true,
+    centerPadding: '300px',
+    slidesToShow: 1,
+  });
+  
+  $(document).ready(function () {
+    $("#formInterest").submit(function (event) {
+      var formData = {
+        'entry.1496497757': $("#from").val(),
+        'entry.1729076589': $("#to").val(),
+        'entry.613570501': $("#message").val(),
+      };
+      
+      $.ajax({
+        type: "POST",
+        url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSexwgsKP9hSAKcDQPot-cxuaDzm44SdOV5rjbN7ga2sJUowYA/formResponse',
+        data: formData,
+        dataType: "json",
+        encode: true,
+        complete: function (err) {
+          var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+          var toastList = toastElList.map(function (toastEl) {
+            return new bootstrap.Toast(toastEl)
+          })
+          toastList.forEach(toast => toast.show())
+          
+          
+        }
+      });
+      
+      event.preventDefault();
+    });
+  });
+  
   (function () {
     
     const second = 1000,
@@ -410,10 +1001,10 @@
           const now = new Date().getTime(),
               distance = countDown - now;
           
-          document.getElementById("days").innerText = (Math.floor(distance / (day))  <10 ? '0': '')+Math.floor(distance / (day)),
-              document.getElementById("hours").innerText = (Math.floor((distance % (day)) / (hour)) < 10 ? '0': '')+Math.floor((distance % (day)) / (hour)),
-              document.getElementById("minutes").innerText = (Math.floor((distance % (hour)) / (minute)) < 10 ? '0': '')+Math.floor((distance % (hour)) / (minute)),
-              document.getElementById("seconds").innerText = (Math.floor((distance % (minute)) / second) < 10 ? '0': '')+ Math.floor((distance % (minute)) / second)  ;
+          document.getElementById("days").innerText = (Math.floor(distance / (day)) < 10 ? '0' : '') + Math.floor(distance / (day)),
+              document.getElementById("hours").innerText = (Math.floor((distance % (day)) / (hour)) < 10 ? '0' : '') + Math.floor((distance % (day)) / (hour)),
+              document.getElementById("minutes").innerText = (Math.floor((distance % (hour)) / (minute)) < 10 ? '0' : '') + Math.floor((distance % (hour)) / (minute)),
+              document.getElementById("seconds").innerText = (Math.floor((distance % (minute)) / second) < 10 ? '0' : '') + Math.floor((distance % (minute)) / second);
           
           //do something later when date is reached
           if (distance < 0) {
@@ -425,8 +1016,9 @@
           //seconds
         }, 0)
   }());
+  
   function playPause() {
-    if(document.getElementById("playerVolumeOff").style.display === 'none') {
+    if (document.getElementById("playerVolumeOff").style.display === 'none') {
       document.getElementById("playerVolumeOff").style.display = 'block';
       document.getElementById("playerVolumeOn").style.display = 'none';
       document.getElementById("playerAudio").pause();
