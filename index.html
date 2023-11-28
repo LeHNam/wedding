@@ -139,8 +139,22 @@
     
     .hero-content-wrap:before {
     }
-    
-    
+
+    .hero-content-modal-wrap {
+      background-image: url(/image/z4922867981008_62f73464f47cc77a4ec37af84bef0496.jpg)!important;
+    }
+    @media (min-width: 720px) {
+      .modal-dialog{
+        max-width: 80%;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero-content-modal-wrap {
+        background-image: url(/image/z4922886605164_62ec140da8a8fb92b1bbc15c8e58e3f7.jpg)!important;
+      }
+    }
+
     #countdown {
       font-family: Baskerville;
       font-size: 20px;
@@ -220,8 +234,14 @@
       left: 40px;
       z-index: 99999;
     }
-    
+
+    .w-90 {
+      width: 90%!important;
+    }
     @media (max-width: 576px) {
+      #logoHeader{
+        font-size: 20px;
+      }
       #navItemHeader {
         position: absolute;
         padding: 0;
@@ -618,17 +638,37 @@
       padding: 70px 0;
       background-color: #fff;
     }
+
+    .modal-body{
+      padding: 0!important;
+    }
+
   </style>
 </head>
 <body>
 
 <div class="container">
-  <div style="width: 100%; position: fixed; z-index: 999999; background-color: #FFFFFF;left: 0; top: 0">
-    <div class="row" style="padding-top: 15px">
-      <div class="col col-12 col-sm-2" id="logoHeader">
-        Khoa & Vy
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <!-- Modal body -->
+        <div class="modal-body">
+          <section class="banner-area hero-area position-relative bodyClass"  >
+            <div class="banner-content-wrap hero-content-wrap hero-content-modal-wrap"></div>
+            <div class="banner-content hero-content">
+    
+            </div>
+          </section>
+        </div>
       </div>
-      <div class="col col-sm-10 " id="navItemHeader">
+    </div>
+  </div>
+  
+  <div style="width: 100%; position: fixed; z-index: 1000; background-color: #FFFFFF;left: 0; top: 0">
+    <div class="row" style="padding-top: 15px">
+      <div class="col col-12 col-sm-4" id="logoHeader">
+        Ở đây có một tình yêu nở hoa
+      </div>
+      <div class="col col-sm-8 " id="navItemHeader">
         <nav class="navbar navbar-expand-lg  float-end" style="padding: 0">
           <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -666,22 +706,14 @@
     </div>
   
   </div>
-  <div class="row" id="home" style="padding-top: 84px">
-    <div class="col col-12">
-      <div class="headerText d-flex align-items-center justify-content-center">
-        OUR LOVE STORY
-      </div>
-    </div>
-  </div>
-  <div class="row">
+  <div class="row"  id="home" style="padding-top: 84px">
     <div class="col col-12">
       <div class="bodyText  d-flex align-items-center justify-content-center">
-        <div style="max-width: 700px;">
+        <div style="max-width: 720px;">
           <img src="image/quote_left.png" height="18">
-          “Một ngày nào đó trên thế giới rộng lớn này, chúng ta sẽ gặp được một người thuộc về riêng mình. Một người
-          bạn, một nửa tâm hồn, người mà chúng ta có thể kể cho họ nghe về những giấc mơ của mình”
+          Em và anh vốn không quen biết, từ những con người xa lạ, gặp gỡ, yêu đương rồi quyết định gắn bó.
+          Thật may mắn khi gặp được người. Chỉ muốn yêu người thật lâu rồi cùng nắm tay đi hết con đường hạnh phúc.
           <img src="image/quote_right.png" height="18">
-        
         </div>
       </div>
     </div>
@@ -769,20 +801,20 @@
          <div class="text-center"><img src="/album/CTPT2113-min.jpg" class="d-block " alt="..."></div>
          <div class="text-center"><img src="/album/CTPT2188-min.jpg" class="d-block " alt="..."></div>
          <div class="text-center"><img src="/album/CTPT2317-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2436-min.jpg" class="d-block " alt="..."></div>
-<!--         <div class="text-center"><img src="/album/CTPT2457-min.jpg" class="d-block " alt="..."></div>-->
-         <div class="text-center"><img src="/album/CTPT2666-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2669-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2695-min.jpg" class="d-block " alt="..."></div>
-<!--         <div class="text-center"><img src="/album/CTPT2698-min.jpg" class="d-block " alt="..."></div>-->
-        <div class="text-center"><img src="/album/CTPT2303-min.jpg" class="d-block " alt="..."></div>
-<!--        <div class="text-center"><img src="/album/CTPT2306-min.jpg" class="d-block " alt="..."></div>-->
-        <div class="text-center"><img src="/album/CTPT2310-min.jpg" class="d-block " alt="..."></div>
+<!--        <div class="text-center"><img src="/album/CTPT2303-min.jpg" class="d-block " alt="..."></div>-->
+ <!--        <div class="text-center"><img src="/album/CTPT2306-min.jpg" class="d-block " alt="..."></div>-->
+<!--        <div class="text-center"><img src="/album/CTPT2310-min.jpg" class="d-block " alt="..."></div>-->
         <div class="text-center"><img src="/album/CTPT2311-min.jpg" class="d-block " alt="..."></div>
         <div class="text-center"><img src="/album/CTPT2381-min.jpg" class="d-block " alt="..."></div>
         <div class="text-center"><img src="/album/CTPT2392-min.jpg" class="d-block " alt="..."></div>
         <div class="text-center"><img src="/album/CTPT2477-min.jpg" class="d-block " alt="..."></div>
         <div class="text-center"><img src="/album/CTPT2496-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img src="/album/CTPT2436-min.jpg" class="d-block " alt="..."></div>
+<!--         <div class="text-center"><img src="/album/CTPT2457-min.jpg" class="d-block " alt="..."></div>-->
+         <div class="text-center"><img src="/album/CTPT2666-min.jpg" class="d-block " alt="..."></div>
+         <div class="text-center"><img src="/album/CTPT2669-min.jpg" class="d-block " alt="..."></div>
+         <div class="text-center"><img src="/album/CTPT2695-min.jpg" class="d-block " alt="..."></div>
+<!--         <div class="text-center"><img src="/album/CTPT2698-min.jpg" class="d-block " alt="..."></div>-->
       </div>
     </div>
     <div class=" mobile" style="margin-top: 50px">
@@ -811,6 +843,14 @@
       <div class="text-center"><img src="/album/CTPT2113-min.jpg" class="d-block w-100" alt="..."></div>
       <div class="text-center"><img src="/album/CTPT2188-min.jpg" class="d-block w-100" alt="..."></div>
       <div class="text-center"><img src="/album/CTPT2317-min.jpg" class="d-block w-100" alt="..."></div>
+<!--      <div class="text-center"><img src="/album/CTPT2303-min.jpg" class="d-block w-100" alt="..."></div>-->
+<!--      <div class="text-center"><img src="/album/CTPT2306-min.jpg" class="d-block w-100" alt="..."></div>-->
+<!--      <div class="text-center"><img src="/album/CTPT2310-min.jpg" class="d-block w-100" alt="..."></div>-->
+      <div class="text-center"><img src="/album/CTPT2311-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img src="/album/CTPT2381-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img src="/album/CTPT2392-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img src="/album/CTPT2477-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img src="/album/CTPT2496-min.jpg" class="d-block w-100" alt="..."></div>
       <div class="text-center"><img src="/album/CTPT2436-min.jpg" class="d-block w-100" alt="..."></div>
       <div class="text-center"><img src="/album/CTPT2457-min.jpg" class="d-block w-100" alt="..."></div>
       <div class="text-center"><img src="/album/CTPT2666-min.jpg" class="d-block w-100" alt="..."></div>
@@ -818,14 +858,6 @@
       <div class="text-center"><img src="/album/CTPT2695-min.jpg" class="d-block w-100" alt="..."></div>
       <div class="text-center"><img src="/album/CTPT2698-min.jpg" class="d-block w-100" alt="..."></div>
       <div class="text-center"><img src="/album/CTPT2701-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2303-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2306-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2310-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2311-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2381-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2392-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2477-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2496-min.jpg" class="d-block w-100" alt="..."></div>
 
     </div>
   </section>
@@ -874,38 +906,11 @@
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
              tabindex="0">
           <div class="row">
-            <div class="col col-12 col-sm-6" id="phanThietBody">
-              <div class=" row ">
-                <p class="text1">
-                  Hôn lễ
-                </p>
-                <p class="text2">
-                  THỨ BẢY, NGÀY 02 THÁNG 12 NĂM 2023 </p>
-                <p class="text3">
-                  (Nhằm ngày 20 tháng 10 năm Quý Mão) </p>
-                <p class="text4">
-                  14:00 PM </p>
-                <p class="text5">
-                  Tư gia
-                </p>
-              </div>
-            </div>
-            <div class="col col-12 col-sm-6">
-              <div class=" row ">
-                <p class="text1">
-                  Tiệc cưới
-                </p>
-                <p class="text2">
-                  THỨ BẢY, NGÀY 02 THÁNG 12 NĂM 2023 </p>
-                <p class="text3">
-                  (Nhằm ngày 20 tháng 10 năm Quý Mão) </p>
-                <p class="text4">
-                  17:00 PM </p>
-                <a class="text5"  href="https://www.google.com/maps/place/Nh%C3%A0+h%C3%A0ng+ti%E1%BB%87c+c%C6%B0%E1%BB%9Bi+Sunrise+Palace+Ninh+Thu%E1%BA%ADn/@11.5626854,108.9951224,15z/data=!4m6!3m5!1s0x3170d18f9cb5aa2f:0x122e6faeb082ae38!8m2!3d11.5626854!4d108.9951224!16s%2Fg%2F11mvx5fj0r?entry=ttu">
-                                     Sảnh Queen - Nhà hàng tiệc cưới Sunrise Palace
-                    283 Ngô Gia Tự,<br> Phường Tấn Tài, TP. PR-TC, Tỉnh Ninh Thuận
-                    <i class="fa-solid fa-map"></i>
-                </a>
+            <div class="col col-12 col-sm-12">
+              <div class="d-flex align-items-center justify-content-center">
+                <div  style="max-width: 720px" class="d-flex align-items-center justify-content-center">
+                  <img src="image/img_4.png" alt="..."  class="d-block w-90">
+                </div>
               </div>
             </div>
           </div>
@@ -913,22 +918,10 @@
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
           <div class="row">
             <div class="col col-12 col-sm-12">
-              <div class=" row ">
-                <p class="text1">
-                  Tiệc báo hỷ
-                </p>
-                <p class="text2">
-                  THỨ BẢY, NGÀY 16 THÁNG 12 NĂM 2023 </p>
-                <p class="text3">
-                  (Nhằm ngày 04 tháng 11 năm Quý Mão)</p>
-                <p class="text4">
-                  18:00 PM </p>
-                <a class="text5" href="https://www.google.com/maps/place/Amor+Resort+Wedding+%26+Event+Garden/@10.808018,106.6851521,17z/data=!3m1!4b1!4m6!3m5!1s0x31752929c0e8be8b:0xbdb4b0e182b51a90!8m2!3d10.808018!4d106.687727!16s%2Fg%2F11h64v8td3?entry=ttu">
-                  Sảnh Bella Vita, Amor Resort - Wedding & Event Garden
-                  61A Nguyễn Văn Đậu, <br>Phường 6, Quận Bình Thạnh, TP. HCM
-                  <i class="fa-solid fa-map"></i>
-
-                </a>
+              <div class="d-flex align-items-center justify-content-center">
+                <div  style="max-width: 720px;" class="d-flex align-items-center justify-content-center">
+                  <img src="image/img_4.png" alt="..."  class="d-block w-90">
+                </div>
               </div>
             </div>
           </div>
@@ -1055,6 +1048,8 @@ text-align: left;
   });
   
   $(document).ready(function () {
+    $('#myModal').modal('show');
+  
     $("#formInterest").submit(function (event) {
       var formData = {
         'entry.1496497757': $("#from").val(),
