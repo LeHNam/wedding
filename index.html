@@ -671,8 +671,15 @@
             <div class="col col-10 col-sm-4" style="padding: 0; margin: 0 auto">
               <section class="banner-area hero-area position-relative bodyClass"  >
                 <div class="banner-content-wrap hero-content-wrap hero-content-modal-wrap" style="background-image: url(/image/img_8.png)!important;"></div>
-                <div class="banner-content hero-content">
-    
+                <div class="banner-content hero-content" style="text-align: right">
+                  <div style="padding-right: 20px; padding-top: 20px">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="40" height="40" rx="20" fill="white"/>
+                      <path d="M29.375 13.4375L22.8125 20L29.375 26.625C30.1875 27.375 30.1875 28.6875 29.375 29.4375C28.625 30.25 27.3125 30.25 26.5625 29.4375L20 22.875L13.375 29.4375C12.625 30.25 11.3125 30.25 10.5625 29.4375C9.75 28.6875 9.75 27.375 10.5625 26.625L17.125 20L10.5625 13.4375C9.75 12.6875 9.75 11.375 10.5625 10.625C11.3125 9.8125 12.625 9.8125 13.375 10.625L20 17.1875L26.5625 10.625C27.3125 9.8125 28.625 9.8125 29.375 10.625C30.1875 11.375 30.1875 12.6875 29.375 13.4375Z" fill="#275238"/>
+                    </svg>
+
+                  </div>
+
                 </div>
               </section>
             </div>
@@ -1119,7 +1126,7 @@ text-align: left;
     }
     //end
     
-    const countDown = new Date(birthday).getTime(),
+    const countDown = new Date(birthday + ' 10:00:00').getTime(),
         x = setInterval(function () {
           
           const now = new Date().getTime(),
