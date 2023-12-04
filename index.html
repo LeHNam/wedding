@@ -1117,16 +1117,16 @@ text-align: left;
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        dayMonth = "12/02/",
-        birthday = dayMonth + yyyy;
+        dayMonth = "12/16/",
+        birthday = dayMonth + 2023;
     
     today = mm + "/" + dd + "/" + yyyy;
     if (today > birthday) {
-      birthday = dayMonth + nextYear;
+      document.getElementById("countdown").style.display = 'none'
     }
     //end
     
-    const countDown = new Date(birthday + ' 10:00:00').getTime(),
+    const countDown = new Date(birthday + ' 18:00:00').getTime(),
         x = setInterval(function () {
           
           const now = new Date().getTime(),
