@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Wedding Khoa&Vy</title>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta property="og:image" content="/image/banner.jpg"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
@@ -917,18 +918,18 @@
       <ul class="nav nav-pills mb-3 list-inline mx-auto justify-content-center" id="pills-tab" role="tablist" style="    padding-right: 0px;
 ">
         <li class="nav-item" role="presentation" style="margin-right: 12px">
-          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+          <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
                   type="button" role="tab" aria-controls="pills-home" aria-selected="true">Ninh Thuận
           </button>
         </li>
         <li class="nav-item" role="presentation" style="margin-left: 12px">
-          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+          <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
                   type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Sài Gòn
           </button>
         </li>
       </ul>
       <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+        <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
              tabindex="0">
           <div class="row">
             <div class="col col-12 col-sm-12">
@@ -940,7 +941,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
           <div class="row">
             <div class="col col-12 col-sm-12">
               <div class="d-flex align-items-center justify-content-center">
@@ -1037,8 +1038,8 @@ text-align: left;
           </div>
           <div class="mb-40px ">
             <label for="message" class="form-label">Lời chúc</label>
-            <input type="text" name="entry.613570501" class="form-control" id="message"
-                   placeholder="Nội dung lời chúc bạn muốn gửi gắm" required>
+            <textarea  name="entry.613570501" class="form-control" id="message"
+                       placeholder="Nội dung lời chúc bạn muốn gửi gắm" required ></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="submitBtn">Gửi đi</button>
         </form>
@@ -1094,8 +1095,9 @@ text-align: left;
             return new bootstrap.Toast(toastEl)
           })
           toastList.forEach(toast => toast.show())
-          
-          
+          $("#from").val('');
+          $("#to").val('');
+          $("#message").val('');
         }
       });
       
