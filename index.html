@@ -143,22 +143,23 @@
     
     .hero-content-wrap:before {
     }
-
+    
     .hero-content-modal-wrap {
-      background-image: url(/image/z4922867981008_62f73464f47cc77a4ec37af84bef0496.jpg)!important;
+      background-image: url(/image/z4922867981008_62f73464f47cc77a4ec37af84bef0496.jpg) !important;
     }
+    
     @media (min-width: 720px) {
-      .modal-dialog{
+      .modal-dialog {
         max-width: 80%;
       }
     }
-
+    
     @media (max-width: 720px) {
       .hero-content-modal-wrap {
-        background-image: url(/image/z4922886605164_62ec140da8a8fb92b1bbc15c8e58e3f7.jpg)!important;
+        background-image: url(/image/z4922886605164_62ec140da8a8fb92b1bbc15c8e58e3f7.jpg) !important;
       }
     }
-
+    
     #countdown {
       font-family: Baskerville;
       font-size: 20px;
@@ -238,16 +239,18 @@
       left: 40px;
       z-index: 99999;
     }
-
+    
     .w-90 {
-      width: 90%!important;
+      width: 90% !important;
     }
+    
     @media (max-width: 576px) {
-      #logoHeader{
+      #logoHeader {
         font-size: 18px;
         text-align: left;
         margin-left: 24px;
       }
+      
       #navItemHeader {
         position: absolute;
         padding: 0;
@@ -311,24 +314,26 @@
         background-color: rgb(1, 13, 5, 0.5);
       }
     }
+    
     @media (max-width: 400px) {
       #countdown {
         padding: 1px 20px;
         font-size: 16px;
         margin: 20px 10px;
         line-height: 16px;
-    
+        
       }
-  
+      
       .digit {
         font-size: 24px;
         line-height: 24px;
         letter-spacing: 0em;
         text-align: center;
-    
+        
       }
-  
+      
     }
+    
     .mobile {
       display: none;
     }
@@ -596,8 +601,8 @@
       line-height: 21px;
       letter-spacing: 0em;
       text-align: center;
-      color: #275238!important;
-      text-decoration: none!important;
+      color: #275238 !important;
+      text-decoration: none !important;
     }
     
     #phanThietBody {
@@ -645,50 +650,102 @@
       padding: 70px 0;
       background-color: #fff;
     }
-
-    .modal-body{
-      padding: 0!important;
+    
+    .modal-body {
+      padding: 0 !important;
     }
-
+    
+    .block.Image .img, .block.Image .img {
+      height: 100%;
+      background-size: cover;
+      background-position: 50% 50%;
+      transition: opacity 400ms;
+      opacity: 0;
+    }
+    
+    .block.Image .img {
+      opacity: 1;
+      background-repeat: no-repeat;
+    }
+    
+    .block.Image {
+      cursor: pointer;
+      overflow: hidden;
+    }
+    
+    .block.Image .img.highres {
+      transition: opacity 400ms;
+      opacity: 1;
+      background-repeat: no-repeat;
+    }
+    
+    .block.Image {
+      border: 1px solid #eeeeee;
+      background-color: #dbd9d9;
+    }
+    
+    
+    .block.Image .footer {
+      bottom: -100px;
+      -webkit-transition: bottom 200ms;
+    }
+    
+    .block.Image .footer.end {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 60px;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.80);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      position: absolute;
+      color: #FFFFFF !important;
+      
+    }
+    
+    .block.Image .footer.end .blockIconsWrapper:first-child {
+      display: flex;
+      max-width: calc(100% - 40px);
+    }
+    
+    .block.Image .footer.end .blockIconsWrapper .print .label {
+      display: none;
+    }
+    
+    .block.Image .footer.end.hasBuyLabel .blockIconsWrapper:first-child {
+      width: 70%;
+    }
+    
+    .block.Image .footer.end.hasBuyLabel .blockIconsWrapper .print .label {
+      display: block;
+    }
+    
+    .block.Image:hover .footer-wrap{
+      transition: 0.3s;
+      opacity: 0.5!important;
+    }
+    
+    .footer-c {
+      color: #FFFFFF !important;
+      padding: 20px;
+      font-size: 20px;
+      font-family: Baskerville;
+      word-wrap: break-word;
+      text-underline: none !important;
+      
+    }
+    
+    .hinhlea {
+      text-decoration: none !important;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <div class="modal" id="myModal">
-    <div class="modal-dialog">
-        <!-- Modal body -->
-        <div class="modal-body">
-          <div class="row" style="max-width: 1200px;">
-            <div class="col col-sm-8 desktop" style="padding: 0">
-              <section class="banner-area hero-area position-relative bodyClass">
-                <div class="banner-content-wrap hero-content-wrap "   style="background-image: url(/image/img_7.png)!important;"></div>
-                <div class="banner-content hero-content">
-    
-                </div>
-              </section>
-
-            </div>
-            <div class="col col-10 col-sm-4" style="padding: 0; margin: 0 auto">
-              <section class="banner-area hero-area position-relative bodyClass"  >
-                <div class="banner-content-wrap hero-content-wrap hero-content-modal-wrap" style="background-image: url(/image/img_8.png)!important;"></div>
-                <div class="banner-content hero-content" style="text-align: right">
-                  <div style="padding-right: 20px; padding-top: 20px">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="40" height="40" rx="20" fill="white"/>
-                      <path d="M29.375 13.4375L22.8125 20L29.375 26.625C30.1875 27.375 30.1875 28.6875 29.375 29.4375C28.625 30.25 27.3125 30.25 26.5625 29.4375L20 22.875L13.375 29.4375C12.625 30.25 11.3125 30.25 10.5625 29.4375C9.75 28.6875 9.75 27.375 10.5625 26.625L17.125 20L10.5625 13.4375C9.75 12.6875 9.75 11.375 10.5625 10.625C11.3125 9.8125 12.625 9.8125 13.375 10.625L20 17.1875L26.5625 10.625C27.3125 9.8125 28.625 9.8125 29.375 10.625C30.1875 11.375 30.1875 12.6875 29.375 13.4375Z" fill="#275238"/>
-                    </svg>
-
-                  </div>
-
-                </div>
-              </section>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
   <div style="width: 100%; position: fixed; z-index: 1000; background-color: #FFFFFF;left: 0; top: 0">
     <div class="row" style="padding-top: 15px">
       <div class="col col-12 col-sm-4" id="logoHeader">
@@ -712,13 +769,10 @@
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item">
-                    <a class="nav-link navItemHeader active" aria-current="page" href="#home">Trang chủ</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link navItemHeader" href="#album">Album</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link navItemHeader" href="#info">Thông tin Lễ & Tiệc</a>
+                    <a class="nav-link navItemHeader" href="#hinhLeTiec">Hình Lễ & Tiệc</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link navItemHeader" href="#pointsOfInterest">Gửi lời chúc</a>
@@ -732,66 +786,6 @@
     </div>
   
   </div>
-  <div class="row"  id="home" style="padding-top: 84px">
-    <div class="col col-12">
-      <div class="bodyText  d-flex align-items-center justify-content-center">
-        <div style="max-width: 720px;">
-          <img src="image/quote_left.png" height="18">
-          Em và anh vốn không quen biết, từ những con người xa lạ, gặp gỡ, yêu đương rồi quyết định gắn bó.
-          Thật may mắn khi gặp được người. Chỉ muốn yêu người thật lâu rồi cùng nắm tay đi hết con đường hạnh phúc.
-          <img src="image/quote_right.png" height="18">
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="banner-area hero-area position-relative bodyClass"  >
-    <div class="banner-content-wrap hero-content-wrap"></div>
-    <div class="banner-content hero-content">
-      <div id="countdown" class="row">
-        <div class="col ">
-          <div class="digit" id="days">305</div>
-          <span class="">days</span></div>
-        <div class="col ">
-          <div class="digit" id="hours">17</div>
-          <span class="">hours</span></div>
-        <div class="col ">
-          <div class="digit" id="minutes">11</div>
-          <span class="">minutes</span></div>
-        <div class="col ">
-          <div class="digit" id="seconds">17</div>
-          <span class="">seconds</span></div>
-      </div>
-      <div class="d-flex align-items-center justify-content-center" id="player">
-        <div class="player">
-          <div onclick="playPause();" class="playerIcon">
-        <span id="playerVolumeOff">
-<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="44" cy="44" r="44" fill="white" fill-opacity="0.1"/>
-<circle cx="44" cy="44" r="28.75" fill="#010D05" fill-opacity="0.1" stroke="white" stroke-width="0.5"/>
-<path
-    d="M37.4375 35.5234C38.0234 35.1719 38.7656 35.1719 39.3516 35.5625L50.6016 42.3984C51.1484 42.75 51.5 43.375 51.5 44C51.5 44.6641 51.1484 45.2891 50.6016 45.6016L39.3516 52.4766C38.7656 52.8281 38.0234 52.8672 37.4375 52.5156C36.8516 52.2031 36.5 51.5781 36.5 50.875V37.125C36.5 36.4609 36.8516 35.8359 37.4375 35.5234ZM38.375 50.875L49.625 44L38.375 37.125V50.875Z"
-    fill="#F4F4F5"/>
-</svg>
-
-        </span>
-            <span id="playerVolumeOn" style="display:none;">
-<svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="44" cy="44" r="44" fill="white" fill-opacity="0.1"/>
-<circle cx="44" cy="44" r="28.75" fill="#010D05" fill-opacity="0.1" stroke="white" stroke-width="0.5"/>
-<path
-    d="M39.9375 36.5C40.4453 36.5 40.875 36.9297 40.875 37.4375V50.5625C40.875 51.1094 40.4453 51.5 39.9375 51.5C39.3906 51.5 39 51.1094 39 50.5625V37.4375C39 36.9297 39.3906 36.5 39.9375 36.5ZM48.0625 36.5C48.5703 36.5 49 36.9297 49 37.4375V50.5625C49 51.1094 48.5703 51.5 48.0625 51.5C47.5156 51.5 47.125 51.1094 47.125 50.5625V37.4375C47.125 36.9297 47.5156 36.5 48.0625 36.5Z"
-    fill="#F4F4F5"/>
-</svg>
-          </span>
-          </div>
-          <audio id="playerAudio" loop src="/audio/Christina_Perri_-_A_Thousand_Years_CeeNaija.com_.mp3"
-                 controls="controls" style="display: none;"></audio>
-        </div>
-      </div>
-    
-    </div>
-  </section>
-  
   <section class=" bodyClass" id="album">
     <div class="row">
       <div class="col col-12">
@@ -802,161 +796,187 @@
     </div>
     <div class="row desktop">
       <div class="center col" style="margin-top: 50px">
-         <div class="text-center"><img src="/album/CTPT1523-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1556-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1609-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1644-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1648-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1681-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1756-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1771-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1849-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1864-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1878-min.jpg" class="d-block " alt="..."></div>
-<!--         <div class="text-center"><img src="/album/CTPT1881-min.jpg" class="d-block " alt="..."></div>-->
-         <div class="text-center"><img src="/album/CTPT1896-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1929-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1952-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1955-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT1982-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2001-min.jpg" class="d-block " alt="..."></div>
-<!--         <div class="text-center"><img src="/album/CTPT2036-min.jpg" class="d-block " alt="..."></div>-->
-<!--         <div class="text-center"><img src="/album/CTPT2059-min.jpg" class="d-block " alt="..."></div>-->
-         <div class="text-center"><img src="/album/CTPT2081-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2102-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2113-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2188-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2317-min.jpg" class="d-block " alt="..."></div>
-<!--        <div class="text-center"><img src="/album/CTPT2303-min.jpg" class="d-block " alt="..."></div>-->
- <!--        <div class="text-center"><img src="/album/CTPT2306-min.jpg" class="d-block " alt="..."></div>-->
-<!--        <div class="text-center"><img src="/album/CTPT2310-min.jpg" class="d-block " alt="..."></div>-->
-        <div class="text-center"><img src="/album/CTPT2311-min.jpg" class="d-block " alt="..."></div>
-        <div class="text-center"><img src="/album/CTPT2381-min.jpg" class="d-block " alt="..."></div>
-        <div class="text-center"><img src="/album/CTPT2392-min.jpg" class="d-block " alt="..."></div>
-        <div class="text-center"><img src="/album/CTPT2477-min.jpg" class="d-block " alt="..."></div>
-        <div class="text-center"><img src="/album/CTPT2496-min.jpg" class="d-block " alt="..."></div>
-        <div class="text-center"><img src="/album/CTPT2436-min.jpg" class="d-block " alt="..."></div>
-<!--         <div class="text-center"><img src="/album/CTPT2457-min.jpg" class="d-block " alt="..."></div>-->
-         <div class="text-center"><img src="/album/CTPT2666-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2669-min.jpg" class="d-block " alt="..."></div>
-         <div class="text-center"><img src="/album/CTPT2695-min.jpg" class="d-block " alt="..."></div>
-<!--         <div class="text-center"><img src="/album/CTPT2698-min.jpg" class="d-block " alt="..."></div>-->
+        <div class="text-center"><img data-lazy="/album/CTPT1523-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1556-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1609-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1644-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1648-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1681-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1756-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1771-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1849-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1864-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1878-min.jpg" class="d-block " alt="..."></div>
+        <!--         <div class="text-center"><img data-lazy="/album/CTPT1881-min.jpg" class="d-block " alt="..."></div>-->
+        <div class="text-center"><img data-lazy="/album/CTPT1896-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1929-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1952-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1955-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT1982-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2001-min.jpg" class="d-block " alt="..."></div>
+        <!--         <div class="text-center"><img data-lazy="/album/CTPT2036-min.jpg" class="d-block " alt="..."></div>-->
+        <!--         <div class="text-center"><img data-lazy="/album/CTPT2059-min.jpg" class="d-block " alt="..."></div>-->
+        <div class="text-center"><img data-lazy="/album/CTPT2081-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2102-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2113-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2188-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2317-min.jpg" class="d-block " alt="..."></div>
+        <!--        <div class="text-center"><img data-lazy="/album/CTPT2303-min.jpg" class="d-block " alt="..."></div>-->
+        <!--        <div class="text-center"><img data-lazy="/album/CTPT2306-min.jpg" class="d-block " alt="..."></div>-->
+        <!--        <div class="text-center"><img data-lazy="/album/CTPT2310-min.jpg" class="d-block " alt="..."></div>-->
+        <div class="text-center"><img data-lazy="/album/CTPT2311-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2381-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2392-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2477-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2496-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2436-min.jpg" class="d-block " alt="..."></div>
+        <!--         <div class="text-center"><img data-lazy="/album/CTPT2457-min.jpg" class="d-block " alt="..."></div>-->
+        <div class="text-center"><img data-lazy="/album/CTPT2666-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2669-min.jpg" class="d-block " alt="..."></div>
+        <div class="text-center"><img data-lazy="/album/CTPT2695-min.jpg" class="d-block " alt="..."></div>
+        <!--         <div class="text-center"><img data-lazy="/album/CTPT2698-min.jpg" class="d-block " alt="..."></div>-->
       </div>
     </div>
     <div class=" mobile" style="margin-top: 50px">
-      <div class="text-center"><img src="/album/CTPT1523-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1556-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1609-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1644-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1648-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1681-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1756-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1771-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1849-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1864-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1878-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1881-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1896-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1929-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1952-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1955-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT1982-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2001-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2036-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2059-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2081-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2102-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2113-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2188-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2317-min.jpg" class="d-block w-100" alt="..."></div>
-<!--      <div class="text-center"><img src="/album/CTPT2303-min.jpg" class="d-block w-100" alt="..."></div>-->
-<!--      <div class="text-center"><img src="/album/CTPT2306-min.jpg" class="d-block w-100" alt="..."></div>-->
-<!--      <div class="text-center"><img src="/album/CTPT2310-min.jpg" class="d-block w-100" alt="..."></div>-->
-      <div class="text-center"><img src="/album/CTPT2311-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2381-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2392-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2477-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2496-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2436-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2457-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2666-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2669-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2695-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2698-min.jpg" class="d-block w-100" alt="..."></div>
-      <div class="text-center"><img src="/album/CTPT2701-min.jpg" class="d-block w-100" alt="..."></div>
-
+      <div class="text-center"><img data-lazy="/album/CTPT1523-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1556-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1609-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1644-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1648-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1681-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1756-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1771-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1849-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1864-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1878-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1881-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1896-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1929-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1952-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1955-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT1982-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2001-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2036-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2059-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2081-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2102-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2113-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2188-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2317-min.jpg" class="d-block w-100" alt="..."></div>
+      <!--      <div class="text-center"><img data-lazy="/album/CTPT2303-min.jpg" class="d-block w-100" alt="..."></div>-->
+      <!--      <div class="text-center"><img data-lazy="/album/CTPT2306-min.jpg" class="d-block w-100" alt="..."></div>-->
+      <!--      <div class="text-center"><img data-lazy="/album/CTPT2310-min.jpg" class="d-block w-100" alt="..."></div>-->
+      <div class="text-center"><img data-lazy="/album/CTPT2311-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2381-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2392-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2477-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2496-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2436-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2457-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2666-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2669-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2695-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2698-min.jpg" class="d-block w-100" alt="..."></div>
+      <div class="text-center"><img data-lazy="/album/CTPT2701-min.jpg" class="d-block w-100" alt="..."></div>
+    
     </div>
   </section>
-  <section class=" bodyClass" id="info" style="background-color: #EFF9F3">
+  
+  <section class=" bodyClass" id="hinhLeTiec">
     <div class="row">
       <div class="col col-12">
-        <div class=" text-center ">
-          <p class="headerText">SỰ KIỆN</p>
-          <p>
-            <svg color="#275238" width="170" height="18" viewBox="0 0 170 18" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_86_290)">
-                <path
-                    d="M78.7991 14.3894C67.0367 7.59997 53.3755 5.47365 40.254 8.41049C37.5757 9.01049 34.9175 9.76839 32.2492 10.5158C32.2192 10.4421 32.1492 10.3789 32.0493 10.3579C28.7415 9.50523 23.8646 7.41049 25.3437 2.82102C25.4636 2.46312 24.9039 2.19997 24.754 2.55786C24.744 2.58944 24.734 2.61049 24.7241 2.64207C22.9852 6.64207 25.0139 10.5263 28.7814 11.4631C25.3137 12.3684 21.8259 13.1263 18.2582 13.3368C14.4407 13.5579 10.4133 13.1368 6.92557 11.3684C5.37657 10.5789 3.9475 9.47365 2.81823 8.10523C1.99876 7.10523 1.3192 5.95786 0.989412 4.68418C0.819522 4.14734 0.739574 3.58944 0.739574 3.01049C0.659625 0.547335 1.50908 0.999967 3.28792 4.37891C2.99811 4.6947 3.44782 5.17891 3.74763 4.86312C6.63576 1.78944 1.69895 -1.89477 0.339832 1.12628C-0.629541 3.28418 0.629645 6.26312 1.85885 7.95786C3.53776 10.2947 5.94621 11.8631 8.55452 12.7894C13.8211 14.6736 19.3775 14.221 24.754 13.0947C24.794 13.1579 24.844 13.221 24.9439 13.2421C31.3098 15.1789 37.9555 15.8 44.5412 14.9684C47.5393 14.5894 50.4974 13.9158 53.3755 12.9473C56.9732 11.7368 60.371 9.6947 64.2285 9.61049C64.2984 9.61049 64.3484 9.58944 64.3884 9.55786C66.2072 9.66312 67.5164 11.021 67.8861 13C68.016 13.7052 68.056 14.3368 67.8961 14.9158C66.6869 16.0315 65.5876 15.7263 64.1385 15.1368C63.6489 14.9368 63.2091 14.6947 62.6695 14.7579C61.9799 14.8315 61.4203 15.3158 61.3703 16.0737C61.1705 18.8736 64.8681 17.9052 66.2172 17.5158C67.5164 17.1473 68.2259 16.3263 68.5057 15.2842C68.5957 15.1894 68.6057 15.0842 68.5857 14.9789C68.7256 14.2 68.6656 13.3052 68.4258 12.3789C68.1759 11.421 67.7262 10.6421 67.1166 10.0631C71.0541 11.2631 74.8716 12.8947 78.4893 14.9894C78.859 15.2 79.1888 14.6105 78.8191 14.4L78.7991 14.3894ZM65.008 17.1368C64.7781 17.2 63.7088 17.5579 63.5889 17.4105C63.6589 16.8526 63.7388 16.2947 63.8088 15.7263C63.9687 15.8105 64.1286 15.8947 64.2885 15.9894C64.7282 16.0526 65.1279 16.3684 65.6076 16.421C66.1173 16.4736 66.587 16.4 67.0367 16.2315C66.4271 16.7789 65.8375 16.9263 65.008 17.1368ZM52.636 7.75786C56.1837 7.79997 59.7014 8.23155 63.1392 8.99997C62.7195 9.04207 62.2997 9.11576 61.89 9.19997C56.4835 9.16839 51.1969 10.2947 45.8804 11.2737C42.6025 11.8736 39.3046 12.3894 35.9768 12.4842C32.7489 12.5789 29.5409 12.3684 26.323 12.7473C27.4123 12.4947 28.4916 12.221 29.5509 11.9368C37.206 9.91576 44.6611 7.6526 52.636 7.75786ZM24.764 6.18944C24.824 6.33681 24.874 6.47365 24.9439 6.61049C24.9039 6.62102 24.874 6.63155 24.834 6.6526C24.804 6.4947 24.784 6.34734 24.764 6.18944ZM27.8121 9.63154C27.4223 9.39997 27.0825 9.11576 26.8227 8.73681C27.7921 9.46312 28.9413 10.0315 30.0806 10.4526C29.3611 10.3684 28.4616 9.95786 27.8021 9.63154H27.8121ZM26.293 12.7473C26.2231 12.7579 26.1931 12.8105 26.1731 12.8736C26.1132 12.8526 26.0432 12.8421 25.9832 12.821C26.0832 12.8 26.1931 12.7684 26.293 12.7473ZM46.2301 14.0315C39.7144 15.1263 33.0886 14.7263 26.7128 13.021C32.539 12.4 38.3352 12.8947 44.1615 11.8947C49.6279 10.9579 55.0544 9.68418 60.5908 9.52628C58.9519 9.99997 57.3629 10.6947 55.734 11.3473C52.656 12.5789 49.478 13.4842 46.2301 14.021V14.0315Z"
-                    fill="#333333"/>
-                <path
-                    d="M166.342 4.87363C166.632 5.18942 167.092 4.70521 166.802 4.38942C168.581 1.01047 169.43 0.557839 169.35 3.021C169.3 3.4631 169.25 3.90521 169.2 4.34731C168.951 5.53679 168.381 6.57889 167.691 7.53679C166.582 9.08415 165.133 10.3157 163.504 11.1999C159.956 13.1263 155.769 13.5789 151.842 13.3473C148.274 13.1368 144.776 12.3789 141.319 11.4736C145.096 10.5368 147.115 6.65258 145.376 2.65258C145.366 2.621 145.356 2.59994 145.346 2.56837C145.186 2.221 144.636 2.4631 144.756 2.83152C146.225 7.41047 141.348 9.51573 138.051 10.3684C137.951 10.3894 137.891 10.4526 137.851 10.5263C135.182 9.77889 132.524 9.021 129.846 8.421C116.724 5.48415 103.053 7.59994 91.3009 14.3999C90.9311 14.6105 91.2609 15.1999 91.6307 14.9894C95.2583 12.8947 99.0858 11.2315 103.043 10.0315C102.424 10.6105 101.954 11.3999 101.694 12.3789C101.454 13.3157 101.384 14.1999 101.534 14.9894C101.504 15.0842 101.524 15.1894 101.604 15.2842C101.884 16.3368 102.594 17.1473 103.893 17.5263C105.242 17.9157 108.939 18.8736 108.74 16.0842C108.68 15.3157 108.13 14.8526 107.44 14.7684C107.011 14.7157 106.611 14.8736 106.221 15.042C104.702 15.6736 103.513 16.1789 102.164 14.8842C102.094 14.421 102.124 13.9263 102.184 13.4315C102.454 11.2842 103.753 9.68415 105.732 9.56837C105.782 9.59994 105.831 9.621 105.901 9.621C109.619 9.69468 112.867 11.6105 116.325 12.8105C119.333 13.8526 122.441 14.5789 125.579 14.9789C132.164 15.821 138.81 15.1894 145.176 13.2526C145.256 13.2315 145.306 13.1789 145.346 13.1157C149.763 14.0526 154.25 14.5157 158.677 13.5999C163.544 12.5999 169.98 9.10521 170.03 3.021C170.07 -2.66321 162.984 1.27363 166.372 4.87363H166.342ZM104.253 16.4526C104.712 16.4315 105.122 16.2947 105.542 16.1157C106.271 15.7999 106.221 15.3894 106.381 16.5789C106.741 17.3368 106.621 17.5999 106.031 17.3473C105.702 17.3157 105.382 17.2526 105.072 17.1473C104.542 17.0105 103.903 16.9157 103.403 16.6736C103.063 16.5052 102.803 16.2947 102.604 16.042C103.103 16.3157 103.643 16.4736 104.243 16.4526H104.253ZM145.246 6.6631C145.246 6.6631 145.176 6.63152 145.136 6.621C145.206 6.48415 145.256 6.34731 145.316 6.21047C145.296 6.36836 145.276 6.51573 145.246 6.6631ZM142.248 9.65258C141.588 9.97889 140.709 10.3789 139.999 10.4631C141.139 10.042 142.288 9.48415 143.257 8.74731C142.997 9.13679 142.648 9.421 142.248 9.65258ZM137.481 11.1157C139.51 11.6736 141.578 12.2526 143.667 12.7473C140.639 12.4105 137.611 12.5684 134.573 12.5052C131.085 12.4315 127.637 11.9157 124.21 11.2842C118.893 10.3052 113.606 9.18942 108.2 9.21047C107.79 9.12626 107.38 9.05258 106.961 9.01047C109.439 8.4631 111.948 8.07363 114.486 7.89468C122.401 7.33679 129.886 9.01047 137.491 11.1157H137.481ZM123.86 14.042C120.612 13.4947 117.434 12.5894 114.356 11.3684C112.717 10.7157 111.138 10.0315 109.499 9.54731C115.036 9.70521 120.452 10.9789 125.928 11.9157C131.755 12.9052 137.551 12.421 143.377 13.042C137.001 14.7473 130.376 15.1368 123.86 14.0526V14.042ZM143.917 12.8842C143.917 12.8842 143.887 12.8105 143.847 12.7894C143.927 12.8105 143.997 12.821 144.077 12.842C144.027 12.8526 143.967 12.8736 143.917 12.8842Z"
-                    fill="#333333"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_86_290">
-                  <rect width="170" height="18" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-          
-          </p>
+        <div class="headerText d-flex align-items-center justify-content-center">
+          HÌNH LỄ & TIỆC
         </div>
       </div>
     </div>
-    <div class="row d-flex">
-      <ul class="nav nav-pills mb-3 list-inline mx-auto justify-content-center" id="pills-tab" role="tablist" style="    padding-right: 0px;
-">
-        <li class="nav-item" role="presentation" style="margin-right: 12px">
-          <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
-                  type="button" role="tab" aria-controls="pills-home" aria-selected="true">Ninh Thuận
-          </button>
-        </li>
-        <li class="nav-item" role="presentation" style="margin-left: 12px">
-          <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                  type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Sài Gòn
-          </button>
-        </li>
-      </ul>
-      <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
-             tabindex="0">
-          <div class="row">
-            <div class="col col-12 col-sm-12">
-              <div class="d-flex align-items-center justify-content-center">
-                <div  style="max-width: 720px" class="d-flex align-items-center justify-content-center">
-                  <img src="image/img_3.png" alt="..."  class="d-block w-90">
+    <div class="row">
+      <div class="col col-12">
+        <div class="bodyText  d-flex align-items-center justify-content-center">
+          <div style="max-width: 700px;">
+            Chân thành cảm ơn mọi người đã đến chung vui cùng Khoa & Vy.
+            Mình cũng nhau nhìn lại những khoảnh khắc tuyệt vời mà chúng ta đã cùng tạo nên nhé.
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col col-sm-4" style="margin-top: 50px">
+        <a class="hinhlea" href="https://photos.app.goo.gl/zdM3DwKAGSGXwE1w5">
+          <div class="block Image" style=" width: 100%; height: 680px; display: block;position: relative">
+            <div class="footer-wrap" style="position: absolute; width: 100%; height: 100%; z-index: 1; background-color: #FFFFFF; opacity: 0; "></div>
+            <div class="img highres" style="pointer-events: none; background-image: url(/album/M2KHOA_VY-67-min.jpg);">
+              <div class="footer end">
+                <div class="footer-c">
+                  <span style="font-weight: 600">Phan Thiết</span>. <span style="font-weight: 400">Lễ Tư Gia</span>
+                </div>
+                <div class="footer-c float-end" style="text-align: right">
+                  505
+                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.84375 3.52734C0.84375 2.43359 1.71875 1.52734 2.84375 1.52734H14.8438C15.9375 1.52734 16.8438 2.43359 16.8438 3.52734V13.5273C16.8438 14.6523 15.9375 15.5273 14.8438 15.5273H2.84375C1.71875 15.5273 0.84375 14.6523 0.84375 13.5273V3.52734ZM10.9375 6.87109C10.8125 6.65234 10.5625 6.52734 10.3438 6.52734C10.0938 6.52734 9.84375 6.65234 9.71875 6.87109L7 10.8711L6.15625 9.80859C6.03125 9.65234 5.8125 9.52734 5.59375 9.52734C5.34375 9.52734 5.125 9.65234 5 9.80859L3 12.3086C2.8125 12.5586 2.78125 12.8711 2.90625 13.1211C3.03125 13.3711 3.28125 13.5273 3.59375 13.5273H6.59375H7.59375H14.0938C14.3438 13.5273 14.625 13.4023 14.75 13.1523C14.875 12.9023 14.8438 12.5898 14.6875 12.3711L10.9375 6.87109ZM4.34375 6.52734C5.15625 6.52734 5.84375 5.87109 5.84375 5.02734C5.84375 4.21484 5.15625 3.52734 4.34375 3.52734C3.5 3.52734 2.84375 4.21484 2.84375 5.02734C2.84375 5.87109 3.5 6.52734 4.34375 6.52734Z"
+                        fill="white"/>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-          <div class="row">
-            <div class="col col-12 col-sm-12">
-              <div class="d-flex align-items-center justify-content-center">
-                <div  style="max-width: 720px;" class="d-flex align-items-center justify-content-center">
-                  <img src="image/img_4.png" alt="..."  class="d-block w-90">
+        </a>
+  
+      </div>
+      <div class="col col-sm-4" style="margin-top: 50px">
+        <a class="hinhlea" href="https://photos.app.goo.gl/xWF8cMKsZk2gffV79">
+          <div class="block Image" style=" width: 100%; height: 680px; display: block;position: relative">
+            <div class="footer-wrap" style="position: absolute; width: 100%; height: 100%; z-index: 1; background-color: #FFFFFF; opacity: 0; "></div>
+            <div class="img highres" style="pointer-events: none; background-image: url(/album/M2KHOA_VY-540-min.jpg);">
+              <div class="footer end">
+                <div class="footer-c">
+                  <span style="font-weight: 600">Phan Thiết</span>. <span style="font-weight: 400">Tiệc nhà hàng</span>
+                </div>
+                <div class="footer-c float-end" style="text-align: right">
+                  307
+                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.84375 3.52734C0.84375 2.43359 1.71875 1.52734 2.84375 1.52734H14.8438C15.9375 1.52734 16.8438 2.43359 16.8438 3.52734V13.5273C16.8438 14.6523 15.9375 15.5273 14.8438 15.5273H2.84375C1.71875 15.5273 0.84375 14.6523 0.84375 13.5273V3.52734ZM10.9375 6.87109C10.8125 6.65234 10.5625 6.52734 10.3438 6.52734C10.0938 6.52734 9.84375 6.65234 9.71875 6.87109L7 10.8711L6.15625 9.80859C6.03125 9.65234 5.8125 9.52734 5.59375 9.52734C5.34375 9.52734 5.125 9.65234 5 9.80859L3 12.3086C2.8125 12.5586 2.78125 12.8711 2.90625 13.1211C3.03125 13.3711 3.28125 13.5273 3.59375 13.5273H6.59375H7.59375H14.0938C14.3438 13.5273 14.625 13.4023 14.75 13.1523C14.875 12.9023 14.8438 12.5898 14.6875 12.3711L10.9375 6.87109ZM4.34375 6.52734C5.15625 6.52734 5.84375 5.87109 5.84375 5.02734C5.84375 4.21484 5.15625 3.52734 4.34375 3.52734C3.5 3.52734 2.84375 4.21484 2.84375 5.02734C2.84375 5.87109 3.5 6.52734 4.34375 6.52734Z"
+                        fill="white"/>
+                  </svg>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </a>
+  
+      </div>
+      <div class="col col-sm-4" style="margin-top: 50px">
+        <a class="hinhlea" href="https://photos.app.goo.gl/9bozc4GoC3hnBJCo6">
+          <div class="block Image" style=" width: 100%; height: 680px; display: block;position: relative">
+            <div class="footer-wrap" style="position: absolute; width: 100%; height: 100%; z-index: 1; background-color: #FFFFFF; opacity: 0; "></div>
+            <div class="img highres" style="pointer-events: none; background-image: url(/album/K&V0091-min.JPG);">
+              <div class="footer end">
+                <div class="footer-c">
+                  <span style="font-weight: 600">Sài Gòn</span>. <span style="font-weight: 400">Tiệc nhà hàng</span>
+                </div>
+                <div class="footer-c float-end" style="text-align: right">
+                  447
+                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0.84375 3.52734C0.84375 2.43359 1.71875 1.52734 2.84375 1.52734H14.8438C15.9375 1.52734 16.8438 2.43359 16.8438 3.52734V13.5273C16.8438 14.6523 15.9375 15.5273 14.8438 15.5273H2.84375C1.71875 15.5273 0.84375 14.6523 0.84375 13.5273V3.52734ZM10.9375 6.87109C10.8125 6.65234 10.5625 6.52734 10.3438 6.52734C10.0938 6.52734 9.84375 6.65234 9.71875 6.87109L7 10.8711L6.15625 9.80859C6.03125 9.65234 5.8125 9.52734 5.59375 9.52734C5.34375 9.52734 5.125 9.65234 5 9.80859L3 12.3086C2.8125 12.5586 2.78125 12.8711 2.90625 13.1211C3.03125 13.3711 3.28125 13.5273 3.59375 13.5273H6.59375H7.59375H14.0938C14.3438 13.5273 14.625 13.4023 14.75 13.1523C14.875 12.9023 14.8438 12.5898 14.6875 12.3711L10.9375 6.87109ZM4.34375 6.52734C5.15625 6.52734 5.84375 5.87109 5.84375 5.02734C5.84375 4.21484 5.15625 3.52734 4.34375 3.52734C3.5 3.52734 2.84375 4.21484 2.84375 5.02734C2.84375 5.87109 3.5 6.52734 4.34375 6.52734Z"
+                        fill="white"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+  
       </div>
     </div>
   </section>
   
-  <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true" style="position: absolute; top: 20px; right: 20px; z-index: 99999;width: 400px">
+  <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true"
+       style="position: absolute; top: 20px; right: 20px; z-index: 99999;width: 400px">
     <div class="d-flex">
       <div class="toast-body">
         <div style="font-family: Baskerville;
@@ -965,14 +985,17 @@ font-weight: 600;
 line-height: 20px;
 letter-spacing: 0em;
 text-align: left;
-">Tin nhắn đã được gửi đến Vy&Khoa thành công.</div>
+">Tin nhắn đã được gửi đến Vy&Khoa thành công.
+        </div>
         <div style="font-family: Baskerville;
 font-size: 13px;
 font-weight: 400;
 line-height: 20px;
 letter-spacing: -0.011em;
 text-align: left;
-">Chân thành cảm ơn.   </div>   </div>
+">Chân thành cảm ơn.
+        </div>
+      </div>
       <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
     </div>
   </div>
@@ -990,8 +1013,10 @@ text-align: left;
         <div class="bodyText  d-flex align-items-center justify-content-center">
           <div style="max-width: 700px;">
             <img src="image/quote_left.png" height="18">
-            Một lời chúc chân thành không chỉ đơn giản là lời nói, đó như là món quà tinh thần ý nghĩa sẽ được lưu giữ và đồng hành cùng chúng mình suốt những năm tháng hạnh phúc về sau. Còn gì tuyệt vời hơn khi những lời chúc ấy được gửi gắm từ chính những người mà chúng mình yêu thương
-  
+            Một lời chúc chân thành không chỉ đơn giản là lời nói, đó như là món quà tinh thần ý nghĩa sẽ được lưu giữ
+            và đồng hành cùng chúng mình suốt những năm tháng hạnh phúc về sau. Còn gì tuyệt vời hơn khi những lời chúc
+            ấy được gửi gắm từ chính những người mà chúng mình yêu thương
+            
             <img src="image/quote_right.png" height="18">
           
           </div>
@@ -1038,8 +1063,8 @@ text-align: left;
           </div>
           <div class="mb-40px ">
             <label for="message" class="form-label">Lời chúc</label>
-            <textarea  name="entry.613570501" class="form-control" id="message"
-                       placeholder="Nội dung lời chúc bạn muốn gửi gắm" required ></textarea>
+            <textarea name="entry.613570501" class="form-control" id="message"
+                      placeholder="Nội dung lời chúc bạn muốn gửi gắm" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" id="submitBtn">Gửi đi</button>
         </form>
@@ -1049,7 +1074,7 @@ text-align: left;
   <div style="width: 100%; height: 100%; background: #336B49; padding: 20px 0; bottom: 0"></div>
 </div>
 <script>
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var scrollDistance = $(window).scrollTop();
     
     // Show/hide menu on scroll
@@ -1060,107 +1085,20 @@ text-align: left;
     //}
     
     // Assign active class to nav links while scolling
-    $('.bodyClass').each(function(i) {
+    $('.bodyClass').each(function (i) {
       if ($(this).position().top <= scrollDistance + 100) {
         $('.navItemHeader.active').removeClass('active');
         $('.navItemHeader').eq(i).addClass('active');
       }
     });
   }).scroll();
-    $('.center').slick({
+  $('.center').slick({
+    lazyLoad: 'ondemand',
     centerMode: true,
     centerPadding: '100px',
     slidesToShow: 3,
   });
-  
-  $(document).ready(function () {
-    $('#myModal').modal('show');
-  
-    $("#formInterest").submit(function (event) {
-      var formData = {
-        'entry.1496497757': $("#from").val(),
-        'entry.1729076589': $("#to").val(),
-        'entry.613570501': $("#message").val(),
-      };
-      
-      $.ajax({
-        type: "POST",
-        url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSexwgsKP9hSAKcDQPot-cxuaDzm44SdOV5rjbN7ga2sJUowYA/formResponse',
-        data: formData,
-        dataType: "json",
-        encode: true,
-        complete: function (err) {
-          var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-          var toastList = toastElList.map(function (toastEl) {
-            return new bootstrap.Toast(toastEl)
-          })
-          toastList.forEach(toast => toast.show())
-          $("#from").val('');
-          $("#to").val('');
-          $("#message").val('');
-        }
-      });
-      
-      event.preventDefault();
-    });
-  });
-  
-  (function () {
-    
-    const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-    
-    //I'm adding this section so I don't have to keep updating this pen every year :-)
-    //remove this if you don't need it
-    let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
-        dayMonth = "12/16/",
-        birthday = dayMonth + 2023;
-    
-    today = mm + "/" + dd + "/" + yyyy;
-    if (today > birthday) {
-      document.getElementById("countdown").style.display = 'none'
-    }
-    //end
-    
-    const countDown = new Date(birthday + ' 18:00:00').getTime(),
-        x = setInterval(function () {
-          
-          const now = new Date().getTime(),
-              distance = countDown - now;
-          
-          document.getElementById("days").innerText = (Math.floor(distance / (day)) < 10 ? '0' : '') + Math.floor(distance / (day)),
-              document.getElementById("hours").innerText = (Math.floor((distance % (day)) / (hour)) < 10 ? '0' : '') + Math.floor((distance % (day)) / (hour)),
-              document.getElementById("minutes").innerText = (Math.floor((distance % (hour)) / (minute)) < 10 ? '0' : '') + Math.floor((distance % (hour)) / (minute)),
-              document.getElementById("seconds").innerText = (Math.floor((distance % (minute)) / second) < 10 ? '0' : '') + Math.floor((distance % (minute)) / second);
-          
-          //do something later when date is reached
-          if (distance < 0) {
-            document.getElementById("headline").innerText = "It's my birthday!";
-            document.getElementById("countdown").style.display = "none";
-            document.getElementById("content").style.display = "block";
-            clearInterval(x);
-          }
-          //seconds
-        }, 0)
-  }());
-  
-  function playPause() {
-    if (document.getElementById("playerVolumeOff").style.display === 'none') {
-      document.getElementById("playerVolumeOff").style.display = 'block';
-      document.getElementById("playerVolumeOn").style.display = 'none';
-      document.getElementById("playerAudio").pause();
-    } else {
-      document.getElementById("playerVolumeOff").style.display = 'none';
-      document.getElementById("playerVolumeOn").style.display = 'block';
-      document.getElementById("playerAudio").play();
-    }
-  }
+
 
 </script>
 
